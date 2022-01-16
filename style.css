@@ -1,4 +1,9 @@
 /*================ Global Style =================*/
+:root {
+    --main-color: #42526e;
+    --3rd-color: #eff2f7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,10 @@
     border: none;
     box-sizing: border-box;
     font-size: 20px;
+}
+
+img {
+    vertical-align: middle;
 }
 
 button {
@@ -116,40 +125,28 @@ header {
 
 .top-nav {
     grid-area: "tn";
-    background-color: #d8d8d8;
-    border: 1px solid #979797;
+    background-color: #f9fafc;
+    border: 1px solid #e5e9f2;
 }
 
 .top-nav li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1 1 auto;
+    text-align: center;
+    border-left: 1px solid #e5e9f2;
+    flex: 1 0 auto;
+    padding: 8px 0;
 }
 
-.top-nav li:not(:first-child):after {
-    content: "";
-    border: 1px solid #979797;
-    height: 40px;
-    margin: auto;
-}
-
-.top-nav li a {
+.top-nav li a, .top-nav li i {
+    color: var(--main-color);
     font-size: 16px;
 }
 
-.top-nav li i {
-    font-size: 16px;
-    color: #2c2c2c;
+.top-nav li i, .top-nav li img {
+    padding-left: 10px;
 }
 
 .main-nav {
     grid-area: "mn";
-    padding: 10px 0;
-}
-
-.main-nav form {
-    gap: 0 10px;
 }
 
 .main-nav .logo {
@@ -158,27 +155,28 @@ header {
     text-align: right;
 }
 
-
-.main-nav form {
-    margin-left: auto;
-}
-
 .main-nav input[type="search"] {
     padding: 10px 20px;
     border-radius: 50px;
-    border: 1px solid rgb(212, 212, 212);
     text-align: right;
     width: 100%;
-    background-color: #d3d3d3;
+    background-color: var(--3rd-color);
 }
 
+.main-nav .search-category {
+    line-height: 0;
+}
+
+.main-nav button i {
+    color: var(--main-color);
+}
 
 .main-nav .search-category li {
     display: inline-block;
     width: fit-content;
-    padding: 3px 8px;
+    padding: .8em 1em;
     border-radius: 50px;
-    border: 1px solid #929292;
+    border: 1px solid var(--main-color);
     font-size: 10px;
     margin-right: 10px;
 }
@@ -186,7 +184,8 @@ header {
 .main-nav .cart-btn {
     padding: 10px;
     border-radius: 50%;
-    background-color: #d3d3d3;
+    background-color: var(--3rd-color);
+    color: var(--main-color);
 }
 
 /*================= Main ==================*/
@@ -210,6 +209,10 @@ footer h2 {
 
 footer ul {
     padding: 20px 0;
+}
+
+footer ul li {
+    padding: .6em 0;
 }
 
 footer *:not(h2) {
