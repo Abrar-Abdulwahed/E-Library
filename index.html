@@ -1,199 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="top-nav">
-            <div class="container">
-                <ul class="row justify-content-space-between f-dir-row-reverse">
-                    <li>
-                        <a href="#">ادخل لحسابك أو سجل الآن 
-                            <object data="imgs/svg"></object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">الرئيسية 
-                            <object data="imgs/main.svg"></object>
-                        </a>
-                    </li>
-                    <li class="this">
-                        <a href="#">من نحن 
-                            <object data="imgs/who.svg"></object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">اتصل بنا 
-                            <object data="imgs/warranty.svg"></object>
-                        </a>
-                    </li>
-                    <li><a href="#">المساعدة 
-                        <object data="imgs/help.svg"></object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">سياسة الخصوصية 
-                            <object data="imgs/privacy.svg"></object>
-                        </a>
-                    </li>
-                    <li><a href="#">YER اليمن <img src="imgs/saudi.png" alt="saudi logo" width="25"></a></li>
-                    <li><a href="#">
-                        <object data="imgs/language.svg"></object> English</li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-nav">
-            <div class="container">
-                <div class="row main-nav f-dir-row-reverse justify-content-space-between align-items-center">  
-                    <div class="logo col-md-3">
-                        <a href="#" class="logo"><img src="imgs/logo.png" alt=""></a>
-                    </div>    
-                    <div class="col-md-8">
-                        <form action="" class="d-flex justify-content-space-between">
-                            <label for="header_search"></label>
-                            <div class="relative flex-grow-1">
-                                <input id="header_search" type="search" name="header_search" placeholder="البحث"> 
-                                <ul class="search-category absolute left-2 center-v ml-1">
-                                    <li>تلفزيون</li>
-                                    <li>سامسونج</li>
-                                    <li>هواوي</li>
-                                    <li>آيباد</li>
-                                    <li>ساعة آبل</li>
-                                    <li>سماعات</li>
-                                    <li>آيفون</li>
-                                </ul>
-                                <button type="submit" name="header_search_submit" class="absolute left-1 center-v"><i class="fas fa-search"></i></button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="top-nav">
+                <div class="container">
+                    <ul class="row justify-content-space-between f-dir-row-reverse">
+                        <li>
+                            <a href="#">
+                                ادخل لحسابك أو سجل الآن
+                                <object data="imgs/svg"></object>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                الرئيسية
+                                <object data="imgs/main.svg"></object>
+                            </a>
+                        </li>
+                        <li class="this">
+                            <a href="#">
+                                من نحن
+                                <object data="imgs/who.svg"></object>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                اتصل بنا
+                                <object data="imgs/warranty.svg"></object>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                المساعدة
+                                <object data="imgs/help.svg"></object>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                سياسة الخصوصية
+                                <object data="imgs/privacy.svg"></object>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">YER اليمن
+                                <img src="imgs/saudi.png" alt="saudi logo" width="25">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <object data="imgs/language.svg"></object> English
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-nav">
+                    <div class="container">
+                        <div class="row main-nav f-dir-row-reverse justify-content-space-between align-items-center">
+                            <div class="logo col-md-3">
+                                <a href="#" class="logo">
+                                    <img src="imgs/logo.png" alt="">
+                                </a>
                             </div>
-                        </form> 
-                    </div>
-                    <div class="col-md-1">
-                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i></button>  
-                    </div>       
-                </div>
-            </div>
-        </div>
-        <div class="mySlider">
-            <div class="slider-container">
-                <div class="slider">
-                  <div class="slides">
-                    <div id="slides__1" class="slide">
-                      <span class="slide__text">1</span>
-                      <a class="slide__prev" href="#slides__4" title="Next"></a>
-                      <a class="slide__next" href="#slides__2" title="Next"></a>
-                    </div>
-                    <div id="slides__2" class="slide">
-                      <span class="slide__text">2</span>
-                      <a class="slide__prev" href="#slides__1" title="Prev"></a>
-                      <a class="slide__next" href="#slides__3" title="Next"></a>
-                    </div>
-                    <div id="slides__3" class="slide">
-                      <span class="slide__text">3</span>
-                      <a class="slide__prev" href="#slides__2" title="Prev"></a>
-                      <a class="slide__next" href="#slides__4" title="Next"></a>
-                    </div>
-                    <div id="slides__4" class="slide">
-                      <span class="slide__text">4</span>
-                      <a class="slide__prev" href="#slides__3" title="Prev"></a>
-                      <a class="slide__next" href="#slides__1" title="Prev"></a>
-                    </div>
-                  </div>
-                  <div class="slider__nav">
-                    <a class="slider__navlink" href="#slides__1"></a>
-                    <a class="slider__navlink" href="#slides__2"></a>
-                    <a class="slider__navlink" href="#slides__3"></a>
-                    <a class="slider__navlink" href="#slides__4"></a>
-                  </div>
-                </div>
-              </div>
-        </div>
-    </header>
-    <main></main>
-    <footer>
-        <div class="container">
-            <div class="row justify-content-space-between">
-                <div class="col-md-2">
-                    <h2>عن جرير</h2>
-                    <ul class="d-md-block">
-                        <li><a href="#">من نحن</a></li>
-                        <li><a href="#">الحوكمة</a></li>
-                        <li><a href="#">علاقات المستثمرين</a></li>
-                        <li><a href="#">الاستدامة</a></li>
-                        <li><a href="#">الأخبار</a></li>
-                        <li><a href="#">فرص العمل</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h2>روابط سريعة</h2>
-                    <ul class="d-md-block">
-                        <li><a href="#">إصدارات جرير</a></li>
-                        <li><a href="#">قارئ جرير</a></li>
-                        <li><a href="#">شركاء برامج المكافآت</a></li>
-                        <li><a href="#">خدمات شركات الاتصالات</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h2>خدمات جرير</h2>
-                    <ul class="d-md-block">
-                        <li><a href="#">خدمة تقسيط المشتريات</a></li>
-                        <li><a href="#">خدمات ما بعد البيع</a></li>
-                        <li><a href="#">خدمات الحماية الشاملة</a></li>
-                        <li><a href="#">حماية أجهزة آبل</a></li>
-                        <li><a href="#">بطاقة خصم جرير</a></li>
-                        <li><a href="#">بطاقة جرير للهدايا</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h2>خدمة العملاء</h2>
-                    <ul class="d-md-block">
-                        <li><a href="#">مبيعات الشركات</a></li>
-                        <li><a href="#">الأسئلة المتكررة</a></li>
-                        <li><a href="#">دليل التسوق والمطبوعات</a></li>
-                        <li><a href="#">مواقع المعارض</a></li>
-                        <li><a href="#">سياسة الضمان</a></li>
-                        <li><a href="#">سياسة الاسترجاع والاستبدال</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h2>انضم إلى نشرتنا البريدية</h2>
-                    <form action="" class="d-flex">
-                        <label for="subscribe"></label>
-                        <input id="subscribe" type="email" name="subscribe" placeholder="ادخل بريدك الالكتروني"> 
-                        <input type="submit" value="اشتراك">
-                    </form>
-                    <h2 class="mt-2">تواصل معنا</h2>
-                    <div class="d-flex f-dir-row-reverse justify-content-space-around mt-2">
-                        <a href="#" class="icon-link">
-                            <object data="imgs/facebook.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/twitter.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/youtube.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/instagram.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/linkedin.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/snapshat.svg"></object>
-                        </a>
-                        <a href="#" class="icon-link">
-                            <object data="imgs/music.svg"></object>
-                        </a>
+                            <div class="col-md-8">
+                                <form action="" class="d-flex justify-content-space-between">
+                                    <label for="header_search"></label>
+                                    <div class="relative flex-grow-1">
+                                        <input
+                                            id="header_search"
+                                            type="search"
+                                            name="header_search"
+                                            placeholder="البحث"
+                                        >
+                                        <ul class="search-category absolute left-2 center-v ml-1">
+                                            <li>تلفزيون</li>
+                                            <li>سامسونج</li>
+                                            <li>هواوي</li>
+                                            <li>آيباد</li>
+                                            <li>ساعة آبل</li>
+                                            <li>سماعات</li>
+                                            <li>آيفون</li>
+                                        </ul>
+                                        <button type="submit" name="header_search_submit" class="absolute left-1 center-v">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-1">
+                                <button class="cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
-</body>
-<script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
-</html>
+                <div class="mySlider container">
+                    <section class="slideshow">
+                        <div class="slideshow-container slide">
+                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-2212-formula1-cb-ar.jpg" alt="">
+                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-b2s-2022-banners-ar1.jpg" alt="">
+                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-070122-skyworth-smart-tv-cb-ar.jpg" alt="">
+                        </div>
+                    </section>
+                    <div class="slider__nav">
+                        <a class="slider__navlink" href="#slides__1"></a>
+                        <a class="slider__navlink" href="#slides__2"></a>
+                        <a class="slider__navlink" href="#slides__3"></a>
+                        <a class="slider__navlink" href="#slides__4"></a>
+                    </div>
+                </div>
+            </header>
+            <main></main>
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-space-between">
+                        <div class="col-md-2">
+                            <h2>عن جرير</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">من نحن</a>
+                                </li>
+                                <li>
+                                    <a href="#">الحوكمة</a>
+                                </li>
+                                <li>
+                                    <a href="#">علاقات المستثمرين</a>
+                                </li>
+                                <li>
+                                    <a href="#">الاستدامة</a>
+                                </li>
+                                <li>
+                                    <a href="#">الأخبار</a>
+                                </li>
+                                <li>
+                                    <a href="#">فرص العمل</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h2>روابط سريعة</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">إصدارات جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">قارئ جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">شركاء برامج المكافآت</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات شركات الاتصالات</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h2>خدمات جرير</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">خدمة تقسيط المشتريات</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات ما بعد البيع</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات الحماية الشاملة</a>
+                                </li>
+                                <li>
+                                    <a href="#">حماية أجهزة آبل</a>
+                                </li>
+                                <li>
+                                    <a href="#">بطاقة خصم جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">بطاقة جرير للهدايا</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h2>خدمة العملاء</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">مبيعات الشركات</a>
+                                </li>
+                                <li>
+                                    <a href="#">الأسئلة المتكررة</a>
+                                </li>
+                                <li>
+                                    <a href="#">دليل التسوق والمطبوعات</a>
+                                </li>
+                                <li>
+                                    <a href="#">مواقع المعارض</a>
+                                </li>
+                                <li>
+                                    <a href="#">سياسة الضمان</a>
+                                </li>
+                                <li>
+                                    <a href="#">سياسة الاسترجاع والاستبدال</a>
+                                </li>
+                                <li>
+                                    <a href="#">اتصل بنا</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h2>انضم إلى نشرتنا البريدية</h2>
+                            <form action="" class="d-flex">
+                                <label for="subscribe"></label>
+                                <input
+                                    id="subscribe"
+                                    type="email"
+                                    name="subscribe"
+                                    placeholder="ادخل بريدك الالكتروني"
+                                >
+                                <input type="submit" value="اشتراك">
+                            </form>
+                            <h2 class="mt-2">تواصل معنا</h2>
+                            <div class="d-flex f-dir-row-reverse justify-content-space-around mt-2">
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/facebook.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/twitter.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/youtube.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/instagram.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/linkedin.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/snapshat.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/music.svg"></object>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        <!-- <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script> -->
+    </html>
