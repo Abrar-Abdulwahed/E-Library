@@ -197,13 +197,13 @@ header {
     color: var(--main-color);
 }
 
+/* ====== Slideshow ======*/
 .slider__nav {
     position: absolute;
-    bottom: 20%;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .slider__navlink {
@@ -215,37 +215,131 @@ header {
     margin: 0 6px 0 6px;
 }
 
-.mySlider {
-    padding: 10px 0 50px;
-}
-
-.image-slideshow {
+.slideshow {
+    /* calc(100vh - 300px); */
     width: 100%;
-    height: calc(100vh - 300px);
     overflow: hidden;
     white-space: nowrap;
     font-size: 0;
     position: relative;
 }
 
-.image-slideshow>div {
-    width: 100%;
-    height: calc(100vh - 300px);
-    animation: move 5s ease-in-out infinite alternate;
+.slideshow>.slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    animation: move 12s linear infinite;
     display: inline-block;
 }
 
+.slideshow>.slide img {
+    width: 100%;
+}
+
+.mySlider {
+    position: relative;
+    overflow: hidden;
+    /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.mySlider .slider {
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    transition: 0.8s;
+}
+
+/* SLIDES */
+
+.mySlider .slider>* {
+    font-size: 1rem;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    background: none 50% no-repeat;
+    background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.mySlider .prevNext {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0;
+}
+
+.mySlider .prevNext>div+div {
+    visibility: hidden;
+    /* Hide all but first P/N container */
+}
+
+.mySlider .prevNext a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    width: 2.3em;
+    height: 2.3em;
+    border: solid rgba(0, 0, 0, 0.5);
+    border-width: 0 4px 4px 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.mySlider .prevNext .arrowPrev {
+    left: 6%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.mySlider .prevNext .arrowNext {
+    right: 6%;
+    transform: translateY(-50%) rotate(315deg);
+}
+
+.mySlider .prevNext a:hover {
+    opacity: 1;
+}
+
+.CSSgal .prevNext a+a {
+    left: auto;
+    right: 0;
+}
+
+
 @keyframes move {
-    0%, 30% {
+    0%, 14% {
         transform: translateX(0);
     }
 
-    40%, 70% {
+    15%, 29% {
         transform: translateX(-100%);
     }
 
-    80%, 100% {
+    30%, 44% {
         transform: translateX(-200%);
+    }
+
+    45%, 59% {
+        transform: translateX(-300%);
+    }
+
+    60%, 74% {
+        transform: translateX(-400%);
+    }
+
+    75%, 89% {
+        transform: translateX(-500%);
+    }
+
+    90%, 100% {
+        transform: translateX(-600%);
     }
 }
 
