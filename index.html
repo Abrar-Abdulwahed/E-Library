@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +11,11 @@
         <header>
             <div class="top-nav">
                 <div class="container">
-                    <ul class="row justify-content-space-between f-dir-row-reverse">
+                    <ul class="row align-content-center justify-content-space-between">
                         <li>
                             <a href="#">
-                                ادخل لحسابك أو سجل الآن
-                                <object data="imgs/svg"></object>
+                               <b>ادخل لحسابك أو سجل الآن</b> 
+                                <object data="imgs/register.svg"></object>
                             </a>
                         </li>
                         <li>
@@ -24,7 +24,7 @@
                                 <object data="imgs/main.svg"></object>
                             </a>
                         </li>
-                        <li class="this">
+                        <li>
                             <a href="#">
                                 من نحن
                                 <object data="imgs/who.svg"></object>
@@ -36,6 +36,7 @@
                                 <object data="imgs/warranty.svg"></object>
                             </a>
                         </li>
+                        
                         <li>
                             <a href="#">
                                 المساعدة
@@ -62,7 +63,7 @@
                 </div>
                 <div class="main-nav">
                     <div class="container">
-                        <div class="row main-nav f-dir-row-reverse justify-content-space-between align-items-center">
+                        <div class="row main-nav justify-content-space-between align-items-center">
                             <div class="logo col-md-3">
                                 <a href="#" class="logo">
                                     <img src="imgs/logo.png" alt="">
@@ -76,8 +77,8 @@
                                             id="header_search"
                                             type="search"
                                             name="header_search"
-                                            placeholder="البحث">
-                                        <ul class="search-category absolute left-2 center-v ml-1">
+                                            placeholder="البحث" class="w-100">
+                                        <ul class="search-category absolute left-2 center-v ml-1 d-md-block">
                                             <li>تلفزيون</li>
                                             <li>سامسونج</li>
                                             <li>هواوي</li>
@@ -94,7 +95,7 @@
                             </div>
                             <div class="col-md-1">
                                 <button class="cart-btn">
-                                    <i class="fas fa-shopping-cart"></i>
+                                    <object data="imgs/cart.svg"></object>
                                 </button>
                             </div>
                         </div>
@@ -124,7 +125,7 @@
                             <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-b2s-2022-banners-ar1.jpg" alt="">
                         </div>
                     </div>
-                    <div class="prevNext">
+                    <div class="prevNext w-100">
                         <div>
                             <a href="#s4" class="arrowPrev"></a>
                             <a href="#s2" class="arrowNext"></a>
@@ -153,70 +154,48 @@
             <footer>
                 <div class="container">
                     <div class="row justify-content-space-between">
-                        <div class="col-md-2">
-                            <h2>عن جرير</h2>
-                            <ul class="d-md-block">
-                                <li>
-                                    <a href="#">من نحن</a>
-                                </li>
-                                <li>
-                                    <a href="#">الحوكمة</a>
-                                </li>
-                                <li>
-                                    <a href="#">علاقات المستثمرين</a>
-                                </li>
-                                <li>
-                                    <a href="#">الاستدامة</a>
-                                </li>
-                                <li>
-                                    <a href="#">الأخبار</a>
-                                </li>
-                                <li>
-                                    <a href="#">فرص العمل</a>
-                                </li>
-                            </ul>
+                        <div class="col-sm-12 col-lg-3">
+                            <h2 class="subscribe d-md-block">انضم إلى نشرتنا البريدية</h2>
+                            <form action="" class="d-flex">
+                                <div class="form-control email">
+                                    <label for="subscribe"></label>
+                                    <input
+                                        id="subscribe"
+                                        type="email"
+                                        name="subscribe"
+                                        placeholder="ادخل بريدك الالكتروني" class="w-100">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                                <div class="form-control">
+                                    <input type="submit" value="اشتراك">
+                                </div>     
+                            </form>
+                            <h2 class="my-2">تواصل معنا</h2>
+                            <div class="d-flex f-dir-row-reverse justify-content-space-around my-2">
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/facebook.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/twitter.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/youtube.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/instagram.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/linkedin.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/snapshat.svg"></object>
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <object data="imgs/music.svg"></object>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-2">
-                            <h2>روابط سريعة</h2>
-                            <ul class="d-md-block">
-                                <li>
-                                    <a href="#">إصدارات جرير</a>
-                                </li>
-                                <li>
-                                    <a href="#">قارئ جرير</a>
-                                </li>
-                                <li>
-                                    <a href="#">شركاء برامج المكافآت</a>
-                                </li>
-                                <li>
-                                    <a href="#">خدمات شركات الاتصالات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <h2>خدمات جرير</h2>
-                            <ul class="d-md-block">
-                                <li>
-                                    <a href="#">خدمة تقسيط المشتريات</a>
-                                </li>
-                                <li>
-                                    <a href="#">خدمات ما بعد البيع</a>
-                                </li>
-                                <li>
-                                    <a href="#">خدمات الحماية الشاملة</a>
-                                </li>
-                                <li>
-                                    <a href="#">حماية أجهزة آبل</a>
-                                </li>
-                                <li>
-                                    <a href="#">بطاقة خصم جرير</a>
-                                </li>
-                                <li>
-                                    <a href="#">بطاقة جرير للهدايا</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-2">
                             <h2>خدمة العملاء</h2>
                             <ul class="d-md-block">
                                 <li>
@@ -242,42 +221,68 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3">
-                            <h2>انضم إلى نشرتنا البريدية</h2>
-                            <form action="" class="d-flex">
-                                <label for="subscribe"></label>
-                                <input
-                                    id="subscribe"
-                                    type="email"
-                                    name="subscribe"
-                                    placeholder="ادخل بريدك الالكتروني"
-                                >
-                                <input type="submit" value="اشتراك">
-                            </form>
-                            <h2 class="mt-2">تواصل معنا</h2>
-                            <div class="d-flex f-dir-row-reverse justify-content-space-around mt-2">
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/facebook.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/twitter.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/youtube.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/instagram.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/linkedin.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/snapshat.svg"></object>
-                                </a>
-                                <a href="#" class="icon-link">
-                                    <object data="imgs/music.svg"></object>
-                                </a>
-                            </div>
+                        <div class="col-lg-2">
+                            <h2>خدمات جرير</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">خدمة تقسيط المشتريات</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات ما بعد البيع</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات الحماية الشاملة</a>
+                                </li>
+                                <li>
+                                    <a href="#">حماية أجهزة آبل</a>
+                                </li>
+                                <li>
+                                    <a href="#">بطاقة خصم جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">بطاقة جرير للهدايا</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2">
+                            <h2>روابط سريعة</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">إصدارات جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">قارئ جرير</a>
+                                </li>
+                                <li>
+                                    <a href="#">شركاء برامج المكافآت</a>
+                                </li>
+                                <li>
+                                    <a href="#">خدمات شركات الاتصالات</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2">
+                            <h2>عن جرير</h2>
+                            <ul class="d-md-block">
+                                <li>
+                                    <a href="#">من نحن</a>
+                                </li>
+                                <li>
+                                    <a href="#">الحوكمة</a>
+                                </li>
+                                <li>
+                                    <a href="#">علاقات المستثمرين</a>
+                                </li>
+                                <li>
+                                    <a href="#">الاستدامة</a>
+                                </li>
+                                <li>
+                                    <a href="#">الأخبار</a>
+                                </li>
+                                <li>
+                                    <a href="#">فرص العمل</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
