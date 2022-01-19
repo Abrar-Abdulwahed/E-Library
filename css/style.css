@@ -12,6 +12,8 @@
     --1st-border-color: #444444;
     --2nd-border-color: #f5f5f5;
     --red-color: #f70f06;
+    --yellow-color: #f8dd00;
+    --yellow-light-color: #fffbeb;
     --border-radius-5: 5px;
     --padding-02: 2rem;
 }
@@ -37,7 +39,7 @@ body {
 }
 
 img {
-    width: 100%;
+    /* width: 100%; */
     vertical-align: middle;
 }
 
@@ -82,6 +84,10 @@ h3 {
 h5 {
     font-size: clamp(15px, 1.15rem, 2.1666666667rem) !important;
     font-weight: 600;
+}
+
+.link {
+    cursor: pointer;
 }
 
 .container {
@@ -161,8 +167,16 @@ h5 {
     padding-right: 12px;
 }
 
+.m-1 {
+    margin: 12px;
+}
+
 .mr-1 {
     margin-right: 12px;
+}
+
+.ml-1 {
+    margin-left: 12px;
 }
 
 .mt-1 {
@@ -227,6 +241,10 @@ h5 {
 .form-control {
     display: flex;
     align-items: center;
+}
+
+.price {
+    color: var(--red-color);
 }
 
 /*================ Modal =================*/
@@ -485,42 +503,38 @@ header {
 }
 
 /*================= Main ==================*/
-/* main {
-    height: 90vh;
-} */
 section.current-offers .offer-item {
     padding: .75rem 0;
     border: 1px solid var(--2nd-border-color);
+    box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 30%);
     border-radius: var(--border-radius-5);
+    padding: 0 10px;
+}
+
+section.current-offers .offer-item:first-child {
+    margin-right: 0 !important;
 }
 
 section.current-offers .offer-item:hover {
     border-color: var(--red-color);
 }
 
-section.current-offers .link {
-    cursor: pointer;
-}
-
 section.current-offers .offer-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
+    text-align: center;
 }
 
 section.current-offers .offer-text {
     color: var(--main-color);
+
 }
 
 section.current-offers .offer-text a {
     color: inherit;
 }
 
-section.current-offers .offer-price {
-    color: var(--red-color);
-    text-align: center;
-}
-
-section.current-offers .offer-price span:last-child {
+section.current-offers .price span:last-child {
     font-size: 12px !important;
     color: var(--5th-color)
 }
@@ -528,6 +542,7 @@ section.current-offers .offer-price span:last-child {
 section.current-offers #time-left {
     color: var(--main-color);
     font-weight: 900 !important;
+    border: 1px solid var(--main-color)
 }
 
 section.current-offers .offer-footer {
@@ -555,6 +570,33 @@ section.current-offers .offer-footer .addProduct button {
 section.current-offers object {
     width: 25px;
     height: 25px;
+}
+
+/*================= Cart ==================*/
+.cart-section .subtitle {
+    color: var(--4th-color);
+}
+
+.cart-section .cart-items .subtitle {
+    font-size: 12px !important;
+    color: var(--4th-color);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.blockquote {
+    font-size: 1.4em;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-right: 8px solid var(--yellow-color);
+    background: var(--yellow-light-color);
+}
+
+
+
+.blockquote span a {
+    display: block;
+    color: #4182dd !important;
 }
 
 /*================= Footer ==================*/
@@ -830,125 +872,101 @@ body {
 
 @media (max-width: 484px) {
     .col-xs-1 {
-        flex: 0 0 auto;
-        width: 8.333%;
+        flex: 0 0 8.333%;
     }
 
     .col-xs-2 {
-        flex: 0 0 auto;
-        width: 16.666%;
+        flex: 0 0 16.666%;
     }
 
     .col-xs-3 {
-        flex: 0 0 auto;
-        width: 25%;
+        flex: 0 0 25%;
     }
 
     .col-xs-4 {
-        flex: 0 0 auto;
-        width: 33.333%;
+        flex: 0 0 33.333%;
     }
 
     .col-xs-5 {
-        flex: 0 0 auto;
-        width: 41.667%;
+        flex: 0 0 41.667%;
     }
 
     .col-xs-6 {
-        flex: 0 0 auto;
-        width: 50%;
+        flex: 0 0 50%;
     }
 
     .col-xs-7 {
-        flex: 0 0 auto;
-        width: 58.333%;
+        flex: 0 0 58.333%;
     }
 
     .col-xs-8 {
-        flex: 0 0 auto;
-        width: 66.667%;
+        flex: 0 0 66.667%;
     }
 
     .col-xs-9 {
-        flex: 0 0 auto;
-        width: 75%;
+        flex: 0 0 75%;
     }
 
     .col-xs-10 {
-        flex: 0 0 auto;
-        width: 83.333%;
+        flex: 0 0 83.333%;
     }
 
     .col-xs-11 {
-        flex: 0 0 auto;
-        width: 91.666%;
+        flex: 0 0 91.666%;
     }
 
     .col-xs-12 {
-        flex: 0 0 auto;
-        width: 100%;
+        flex: 0 0 100%;
     }
 }
 
 @media (min-width: 486px) {
     .col-sm-1 {
-        flex: 0 0 auto;
-        width: 8.333%;
+        flex: 0 0 8.333%;
     }
 
     .col-sm-2 {
-        flex: 0 0 auto;
-        width: 16.666%;
+        flex: 0 0 16.666%;
     }
 
     .col-sm-3 {
-        flex: 0 0 auto;
-        width: 25%;
+        flex: 0 0 25%;
     }
 
     .col-sm-4 {
-        flex: 0 0 auto;
-        width: 33.333%;
+        flex: 0 0 33.333%;
     }
 
     .col-sm-5 {
-        flex: 0 0 auto;
-        width: 41.667%;
+        flex: 0 0 41.667%;
     }
 
     .col-sm-6 {
-        flex: 0 0 auto;
-        width: 50%;
+        flex: 0 0 50%;
     }
 
     .col-sm-7 {
-        flex: 0 0 auto;
-        width: 58.333%;
+        flex: 0 0 58.333%;
     }
 
     .col-sm-8 {
-        flex: 0 0 auto;
-        width: 66.667%;
+        flex: 0 0 66.667%;
     }
 
     .col-sm-9 {
-        flex: 0 0 auto;
-        width: 75%;
+        flex: 0 0 75%;
     }
 
     .col-sm-10 {
-        flex: 0 0 auto;
-        width: 83.333%;
+        flex: 0 0 83.333%;
     }
 
     .col-sm-11 {
-        flex: 0 0 auto;
-        width: 91.666%;
+        flex: 0 0 91.666%;
     }
 
     .col-sm-12 {
-        flex: 0 0 auto;
-        width: 100%;
+        flex: 0 0 100%;
     }
 
     .d-sm-none {
@@ -966,63 +984,51 @@ body {
 
 @media (min-width: 720px) {
     .col-md-1 {
-        flex: 0 0 auto;
-        width: 8.333%;
+        flex: 0 0 8.333%;
     }
 
     .col-md-2 {
-        flex: 0 0 auto;
-        width: 16.666%;
+        flex: 0 0 16.666%;
     }
 
     .col-md-3 {
-        flex: 0 0 auto;
-        width: 25%;
+        flex: 0 0 25%;
     }
 
     .col-md-4 {
-        flex: 0 0 auto;
-        width: 33.333%;
+        flex: 0 0 33.333%;
     }
 
     .col-md-5 {
-        flex: 0 0 auto;
-        width: 41.667%;
+        flex: 0 0 41.667%;
     }
 
     .col-md-6 {
-        flex: 0 0 auto;
-        width: 50%;
+        flex: 0 0 50%;
     }
 
     .col-md-7 {
-        flex: 0 0 auto;
-        width: 58.333%;
+        flex: 0 0 58.333%;
     }
 
     .col-md-8 {
-        flex: 0 0 auto;
-        width: 66.667%;
+        flex: 0 0 66.667%;
     }
 
     .col-md-9 {
-        flex: 0 0 auto;
-        width: 75%;
+        flex: 0 0 75%;
     }
 
     .col-md-10 {
-        flex: 0 0 auto;
-        width: 83.333%;
+        flex: 0 0 83.333%;
     }
 
     .col-md-11 {
-        flex: 0 0 auto;
-        width: 91.666%;
+        flex: 0 0 91.666%;
     }
 
     .col-md-12 {
-        flex: 0 0 auto;
-        width: 100%;
+        flex: 0 0 100%;
     }
 
     .d-md-block {
@@ -1032,62 +1038,50 @@ body {
 
 @media (min-width: 960px) {
     .col-lg-1 {
-        flex: 0 0 auto;
-        width: 8.333%;
+        flex: 0 0 8.333%;
     }
 
     .col-lg-2 {
-        flex: 0 0 auto;
-        width: 16.666%;
+        flex: 0 0 16.666%;
     }
 
     .col-lg-3 {
-        flex: 0 0 auto;
-        width: 25%;
+        flex: 0 0 25%;
     }
 
     .col-lg-4 {
-        flex: 0 0 auto;
-        width: 33.333%;
+        flex: 0 0 33.333%;
     }
 
     .col-lg-5 {
-        flex: 0 0 auto;
-        width: 41.667%;
+        flex: 0 0 41.667%;
     }
 
     .col-lg-6 {
-        flex: 0 0 auto;
-        width: 50%;
+        flex: 0 0 50%;
     }
 
     .col-lg-7 {
-        flex: 0 0 auto;
-        width: 58.333%;
+        flex: 0 0 58.333%;
     }
 
     .col-lg-8 {
-        flex: 0 0 auto;
-        width: 66.667%;
+        flex: 0 0 66.667%;
     }
 
     .col-lg-9 {
-        flex: 0 0 auto;
-        width: 75%;
+        flex: 0 0 75%;
     }
 
     .col-lg-10 {
-        flex: 0 0 auto;
-        width: 83.333%;
+        flex: 0 0 83.333%;
     }
 
     .col-lg-11 {
-        flex: 0 0 auto;
-        width: 91.666%;
+        flex: 0 0 91.666%;
     }
 
     .col-lg-12 {
-        flex: 0 0 auto;
-        width: 100%;
+        flex: 0 0 100%;
     }
 }
