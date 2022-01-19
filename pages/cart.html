@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart | السلة</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <base href="../">
+    </head>
+    <body>
+        <section class="cart-section my-2">
+            <div class="container">
+                <div class="h3 title mb-2">
+                    <img src="imgs/cart.svg">
+                    السلة
+                    <span class="subtitle">(3 منتجات)</span>
+                </div>
+                <div class="row justify-content-space-between">
+                    <div class="col-xs-12 col-sm-12 col-md-7">
+                        <div class="cart-item px-2 pt-2 mt-1">
+                            <div class="item-above d-flex">
+                                <div class="ml-1">
+                                    <img src="https://www.jarir.com/media//catalog/product/5/6/569419.jpg" alt="user" width="40" />
+                                </div>
+                                <div class="item-details">
+                                    <span class="h5"> البداية والنهاية الجزء الأول(كتاب إلكتروني)</span><br>
+                                    <span class="subtitle">منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير</span>
+                                    <div>
+                                        <blockquote class="blockquote my-1">
+                                            <p><b>ملاحظة:</b> هذا المنتج رقمي وسيتم توصيله عبر البريد الإلكتروني</p>
+                                            <span><a href="#">كيفية الحصول على منتج?</a></span>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="mr-auto flex-col justify-content-space-around">
+                                    <p class="price"><span class="h3">17.99</span>.ر.س</p>
+                                    <div class="qty-block d-flex justify-content-flex-end">
+                                        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text" />
+                                        <div class="qty_inc_dec flex-col">
+                                            <i class="fas fa-plus increment link" onclick="incrementQty()"></i>
+                                            <i class="fas fa-minus decrement link" onclick="decrementQty()"></i>
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="item-bottom py-1">
+                                <span class="link"><i class="fa fa-close"></i> احذف </span>
+                            </div>       
+                        </div>
+                        <div class="cart-item px-2 pt-2 mt-1">
+                            <div class="item-above d-flex">
+                                <div class="ml-1">
+                                    <img src="https://www.jarir.com/media//catalog/product/5/5/553206.jpg" alt="user" width="40" />
+                                </div>
+                                <div class="item-details">
+                                    <span class="h5">فن اللامبالاة (كتاب إلكتروني)</span><br>
+                                    <span class="subtitle">منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير</span>
+                                    <div>
+                                        <blockquote class="blockquote my-1">
+                                            <p><b>ملاحظة:</b> هذا المنتج رقمي وسيتم توصيله عبر البريد الإلكتروني</p>
+                                            <span><a href="#">كيفية الحصول على منتج?</a></span>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="mr-auto flex-col justify-content-space-around">
+                                    <p class="price"><span class="h3">17.99</span>.ر.س</p>
+                                    <div class="qty-block d-flex justify-content-flex-end">
+                                        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text" />
+                                        <div class="qty_inc_dec flex-col">
+                                            <i class="fas fa-plus increment link" onclick="incrementQty()"></i>
+                                            <i class="fas fa-minus decrement link" onclick="decrementQty()"></i>
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="item-bottom py-1">
+                                <span class="link"><i class="fa fa-close"></i> احذف </span>
+                            </div>       
+                        </div>
+                        <div class="cart-item px-2 pt-2 mt-1">
+                            <div class="item-above d-flex">
+                                <div class="ml-1">
+                                    <img src="https://www.jarir.com/media//catalog/product/5/6/561058.jpg" alt="user" width="40" />
+                                </div>
+                                <div class="item-details">
+                                    <span class="h5">غداً أجمل (كتاب إلكتروني)</span><br>
+                                    <span class="subtitle">منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير</span>
+                                    <div>
+                                        <blockquote class="blockquote my-1">
+                                            <p><b>ملاحظة:</b> هذا المنتج رقمي وسيتم توصيله عبر البريد الإلكتروني</p>
+                                            <span><a href="#">كيفية الحصول على منتج?</a></span>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="mr-auto flex-col justify-content-space-around">
+                                    <p class="price"><span class="h3">17.99</span>.ر.س</p>
+                                    <div class="qty-block d-flex justify-content-flex-end">
+                                        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text" />
+                                        <div class="qty_inc_dec flex-col">
+                                            <i class="fas fa-plus increment link" onclick="incrementQty()"></i>
+                                            <i class="fas fa-minus decrement link" onclick="decrementQty()"></i>
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="item-bottom py-1">
+                                <span class="link"><i class="fa fa-close"></i> احذف </span>
+                            </div>       
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 mt-1 mt-md-0">
+                        <div class="cart-summary flex-col p-2">
+                            <div class="d-flex cart-subtotal justify-content-space-between">
+                                <span class="h6">المجموع</span>
+                                <span class="h5">68.97 <small>ر.س</small></span>
+                            </div>
+                            <div class="d-flex cart-shipping justify-content-space-between">
+                                <span class="h6">تكاليف الشحن</span>
+                                <span class="h4" style="color: #25b74c">مجاني</span>
+                            </div>
+                            <div class="d-flex cart-total justify-content-space-between">
+                                <span class="h3" style="color:#f70f06;">المجموع الكلي <small style="color: #707070;">شامل الضريبة</small></span>
+                                <span class="h4" style="color:#f70f06;">68.97 <small>ر.س</small></span>
+                            </div>
+                            <div>
+                                <p class="pt-120">بالضغط على "إنهاء التسوق" فإنك توافق على <a>الشروط والأحكام</a> و<a>سياسة الخصوصية</a></p>
+                                <button class="btn danger-btn w-100 mt-2 py-1">إنهاء التسوق</button>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <script src="js/include.js"></script>
+        <script src="js/app.js"></script> -->
+    </body>
+    <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
+</html>

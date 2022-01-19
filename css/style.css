@@ -9,13 +9,18 @@
     --5th-color: #e7e7e7;
     --1st-input-bg: #eff2f7;
     --2nd-input-bg: #e5e9f4;
+    --3rd-input-bg: #f3f3f3;
     --1st-border-color: #444444;
     --2nd-border-color: #f5f5f5;
     --red-color: #f70f06;
     --yellow-color: #f8dd00;
     --yellow-light-color: #fffbeb;
+    --blue-color: #4182dd;
     --border-radius-5: 5px;
+    --border-radius-1: 1px;
     --padding-02: 2rem;
+    --1st-box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 30%);
+    --2nd-box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%), 0 3px 3px -2px rgb(0 0 0 / 12%), 0 3px 4px 0 rgb(0 0 0 / 14%);
 }
 
 * {
@@ -74,15 +79,33 @@ h1 {
     font-weight: 600;
 }
 
+.h2,
+h2 {
+    font-size: clamp(18px, 1.3rem + 0.9vw, 2.6666666667rem) !important;
+    font-weight: 600;
+}
+
 .h3,
 h3 {
     font-size: clamp(17px, 1.2rem + 0.5vw, 2rem) !important;
     font-weight: 600 !important;
 }
 
+.h4,
+h4 {
+    font-size: clamp(16px, 1.2rem + 0.3vw, 2.3333333333rem) !important;
+    font-weight: 600;
+}
+
 .h5,
 h5 {
     font-size: clamp(15px, 1.15rem, 2.1666666667rem) !important;
+    font-weight: 600;
+}
+
+.h6,
+h6 {
+    font-size: clamp(14px, 1.1rem, 2rem);
     font-weight: 600;
 }
 
@@ -123,6 +146,10 @@ h5 {
     flex-direction: row-reverse;
 }
 
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
 .justify-content-center {
     justify-content: center;
 }
@@ -151,8 +178,36 @@ h5 {
     text-align: center;
 }
 
+.btn {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    max-width: 100%;
+    word-wrap: break-word;
+    transition: all .5s ease-in-out;
+}
+
+.main-btn {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.danger-btn {
+    background-color: var(--red-color);
+    border-color: var(--red-color);
+}
+
 .w-100 {
     width: 100%;
+}
+
+.g-5 {
+    gap: 5px;
 }
 
 .gx-1 {
@@ -163,8 +218,28 @@ h5 {
     padding: 80px 0;
 }
 
+.pt-120 {
+    padding-top: 120px;
+}
+
+.p-2 {
+    padding: 24px;
+}
+
 .pr-1 {
     padding-right: 12px;
+}
+
+.pt-2 {
+    padding-top: 24px;
+}
+
+.px-2 {
+    padding-inline: 24px;
+}
+
+.py-1 {
+    padding-block: 12px;
 }
 
 .m-1 {
@@ -189,6 +264,10 @@ h5 {
 
 .mt-2 {
     margin-top: 24px;
+}
+
+.mb-2 {
+    margin-bottom: 24px;
 }
 
 .my-1 {
@@ -320,7 +399,6 @@ header {
 }
 
 .main-nav {
-    grid-area: "mn";
     padding: 20px;
 }
 
@@ -367,7 +445,7 @@ header {
     color: var(--main-color);
 }
 
-.main-nav .cart-btn object {
+.main-nav .cart-btn img {
     width: 18px;
     transform: rotateY(180deg);
 }
@@ -471,7 +549,7 @@ header {
     opacity: 1;
 } */
 
-
+/* 
 @keyframes move {
     0%, 14% {
         transform: translateX(0);
@@ -500,13 +578,13 @@ header {
     90%, 100% {
         transform: translateX(-600%);
     }
-}
+} */
 
 /*================= Main ==================*/
 section.current-offers .offer-item {
     padding: .75rem 0;
     border: 1px solid var(--2nd-border-color);
-    box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 30%);
+    box-shadow: var(--1st-box-shadow);
     border-radius: var(--border-radius-5);
     padding: 0 10px;
 }
@@ -573,30 +651,119 @@ section.current-offers object {
 }
 
 /*================= Cart ==================*/
-.cart-section .subtitle {
-    color: var(--4th-color);
+.cart-section img {
+    vertical-align: initial;
+    width: 25px;
 }
 
-.cart-section .cart-items .subtitle {
+.cart-section .subtitle {
+    color: var(--4th-color);
+    font-weight: 400;
+}
+
+.cart-section .item-details .h5 {
+    font-weight: 800 !important;
+}
+
+.cart-section .cart-item, .cart-section .cart-summary {
+    border: 1px solid var(--2nd-border-color);
+    box-shadow: var(--1st-box-shadow);
+    border-radius: var(--border-radius-5);
+}
+
+.cart-section .cart-item:first-child {
+    margin: 0 !important;
+}
+
+.cart-section .cart-item .subtitle {
     font-size: 12px !important;
     color: var(--4th-color);
     font-style: italic;
     font-weight: 500;
 }
 
-.blockquote {
+.cart-section .blockquote {
     font-size: 1.4em;
-    color: #555555;
-    padding: 1.2em 30px 1.2em 75px;
-    border-right: 8px solid var(--yellow-color);
+    color: var(--4th-color);
+    padding: .8em 20px .8em 2.6em;
+    border-right: 5px solid var(--yellow-color);
     background: var(--yellow-light-color);
+    border-radius: var(--border-radius-5);
+    /* width: 60%; */
+}
+
+.cart-section .blockquote b {
+    color: var(--main-color);
 }
 
 
-
-.blockquote span a {
+.cart-section .blockquote span a {
     display: block;
-    color: #4182dd !important;
+    color: var(--blue-color) !important;
+}
+
+.cart-section .item-bottom span {
+    font-weight: 600;
+}
+
+.cart-section .item-bottom {
+    border-top: 2px solid var(--2nd-border-color);
+}
+
+.cart-section .item-bottom span i {
+    background-color: black;
+    color: #fff;
+    font-size: 8px !important;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    margin-left: 2px;
+}
+
+.cart-section .qty-block {
+    border-radius: var(--border-radius-1);
+    color: #809296;
+}
+
+.cart-section .increment, .cart-section .decrement {
+    padding: 3px 6px;
+    border: 1px solid #d4d4d4;
+    border-radius: var(--border-radius-1);
+    font-size: 5px !important;
+    background-color: #f1f1f1;
+}
+
+.cart-section input {
+    padding: 0 5px;
+    text-align: center;
+    width: 30px;
+    border-radius: var(--border-radius-1);
+    color: inherit;
+}
+
+.cart-section .cart-summary {
+    color: var(--main-color);
+}
+
+.cart-section .cart-summary small {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+}
+
+.cart-section .cart-summary button {
+    border-radius: var(--border-radius-5);
+    box-shadow: var(--2nd-box-shadow);
+}
+
+.cart-section .cart-summary p {
+    color: var(--4th-color);
+}
+
+.cart-section .cart-summary p a {
+    color: var(--blue-color);
 }
 
 /*================= Footer ==================*/
@@ -746,7 +913,7 @@ footer .icon-link object {
     text-align: center;
     color: #fff;
     line-height: 20px;
-    box-shadow: 0 0 0 1px #0b76ef;
+    box-shadow: 0 0 0 1px var(--blue-color);
 }
 
 .back svg {
@@ -1029,6 +1196,10 @@ body {
 
     .col-md-12 {
         flex: 0 0 100%;
+    }
+
+    .mt-md-0 {
+        margin-top: 0;
     }
 
     .d-md-block {
