@@ -105,7 +105,7 @@ h5 {
 
 .h6,
 h6 {
-    font-size: clamp(14px, 1.1rem, 2rem);
+    font-size: clamp(14px, 1.1rem, 2rem) !important;
     font-weight: 600;
 }
 
@@ -222,12 +222,24 @@ h6 {
     padding-top: 120px;
 }
 
+.p-1 {
+    padding: 12px;
+}
+
 .p-2 {
     padding: 24px;
 }
 
+.p-3 {
+    padding: 36px;
+}
+
 .pr-1 {
     padding-right: 12px;
+}
+
+.pt-1 {
+    padding-top: 12px;
 }
 
 .pt-2 {
@@ -732,7 +744,7 @@ section.current-offers object {
     padding: 3px 6px;
     border: 1px solid #d4d4d4;
     border-radius: var(--border-radius-1);
-    font-size: 5px !important;
+    font-size: 8px !important;
     background-color: #f1f1f1;
 }
 
