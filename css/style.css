@@ -349,7 +349,6 @@ h6 {
     background-color: #fff;
     margin: auto;
     padding: 20px;
-    width: 80%;
 }
 
 .close-btn {
@@ -369,7 +368,6 @@ h6 {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -872,7 +870,7 @@ section.current-offers object {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 50%;
+    width: 40%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -1309,7 +1307,6 @@ body {
 
 /* ========== login-container ========== */
 .login-container {
-    width: 45%;
     margin: 6% auto;
     display: flex;
     flex-direction: column;
@@ -1378,6 +1375,7 @@ body {
     margin-top: 4rem;
     color: #656769;
     font-size: 1em;
+    padding-bottom: 20px;
 }
 
 .login-form .have-account button {

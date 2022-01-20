@@ -14,37 +14,26 @@
                     
                     <ul class="row align-content-center justify-content-space-between">
                         <li>
-                            <a href="#" onclick="openForm()">
+                            <a href="#">
                                 <object data="imgs/register.svg"></object>
-                                <b>ادخل لحسابك أو سجل الآن</b> 
+                                <b>
+                                    <span id="needLogin" onclick="login()">
+                                        ادخل لحسابك
+                                    </span>
+                                    أو
+                                    <span id="needSignup" onclick="signin()">
+                                        سجل الآن
+                                    </span>
+                                </b> 
                             </a>
                              <!-- Modal -->
                             <div id="modal-dialog" class="modal">
                                  <!-- Modal content -->
-                                <div class="modal-content">
+                                <div id="modal-content" class="modal-content">
                                      <!-- Close Button -->
                                     <button class="close-btn" onclick="closeForm()">
                                         <i class="fa fa-times"></i>
                                     </button>
-                                    <div class="login-form">
-                                        <div class="login-container">
-                                            <h1>تسجيل الدخول</h1>
-                                            <div class="login-form-container">
-                                                <form action="">
-                                                        <input type="email" name="email" id="email" class="email" placeholder="البريد الإلكتروني أو رقم الجوال">
-                                                        <input type="password" name="password" id="password" class="password" placeholder="كلمة السر">
-                                                        <span>نسيت؟</span>
-                                                        <input type="submit" value="تسجيل الدخول">
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="have-account">
-                                            <p>ليس لديك حساب؟</p>
-                                            <a href="pages/signup.html">
-                                                <button>إنشاء حساب جديد</button>
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -105,7 +94,7 @@
                             <form action="" class="d-flex justify-content-space-between">
                                 <label for="header_search"></label>
                                 <div class="relative f-grow-1">
-                                    <input
+                                    <input onkeyup="search_book()"
                                         id="header_search"
                                         type="search"
                                         name="header_search"
@@ -196,6 +185,146 @@
                                 <h5 class="offer-title">كتاب الكتروني</h5>
                                 <p class="offer-text">
                                     <a href="details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                                </p>
+                                <p class="price my-1">
+                                    <span class="h3">17.99</span>.ر.س
+                                    <br><span>شامل الضريبة</span>
+                                </p>
+                                <p id="time-left my-1">
+                                    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                                </p>
+                            </div>
+                            <ul class="offer-footer d-flex justify-content-space-between align-items-center mb-1">
+                                <li>
+                                    <a href="#">
+                                        <object data="imgs/main.svg"></object>
+                                    </a>
+                                </li>
+                                <li class="addProduct">
+                                    <button>
+                                        <object data="imgs/addProduct.svg"></object>
+                                    </button>                
+                                </li>
+                                <li>
+                                    <a href="#"><object data="imgs/exchange.svg"></object></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2">
+                        <div class="offer-item flex-col m-1">
+                            <a href="details.html" class="link">
+                                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=210,height=/https://www.jarir.com/media//catalog/product/5/7/578443.jpg?1" alt="Card image cap">
+                            </a>
+                            <div class="offer-body text-align-center">
+                                <h5 class="offer-title">كتاب الكتروني</h5>
+                                <p class="offer-text">
+                                    <a href="details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                                </p>
+                                <p class="price my-1">
+                                    <span class="h3">17.99</span>.ر.س
+                                    <br><span>شامل الضريبة</span>
+                                </p>
+                                <p id="time-left my-1">
+                                    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                                </p>
+                            </div>
+                            <ul class="offer-footer d-flex justify-content-space-between align-items-center mb-1">
+                                <li>
+                                    <a href="#">
+                                        <object data="imgs/main.svg"></object>
+                                    </a>
+                                </li>
+                                <li class="addProduct">
+                                    <button>
+                                        <object data="imgs/addProduct.svg"></object>
+                                    </button>                
+                                </li>
+                                <li>
+                                    <a href="#"><object data="imgs/exchange.svg"></object></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2">
+                        <div class="offer-item flex-col m-1">
+                            <a href="details.html" class="link">
+                                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=210,height=/https://www.jarir.com/media//catalog/product/5/7/578443.jpg?1" alt="Card image cap">
+                            </a>
+                            <div class="offer-body text-align-center">
+                                <h5 class="offer-title">كتاب الكتروني</h5>
+                                <p class="offer-text">
+                                    <a href="details.html">الله معنا (كتاب إلكتروني)</a>
+                                </p>
+                                <p class="price my-1">
+                                    <span class="h3">17.99</span>.ر.س
+                                    <br><span>شامل الضريبة</span>
+                                </p>
+                                <p id="time-left my-1">
+                                    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                                </p>
+                            </div>
+                            <ul class="offer-footer d-flex justify-content-space-between align-items-center mb-1">
+                                <li>
+                                    <a href="#">
+                                        <object data="imgs/main.svg"></object>
+                                    </a>
+                                </li>
+                                <li class="addProduct">
+                                    <button>
+                                        <object data="imgs/addProduct.svg"></object>
+                                    </button>                
+                                </li>
+                                <li>
+                                    <a href="#"><object data="imgs/exchange.svg"></object></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2">
+                        <div class="offer-item flex-col m-1">
+                            <a href="details.html" class="link">
+                                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=210,height=/https://www.jarir.com/media//catalog/product/5/7/578443.jpg?1" alt="Card image cap">
+                            </a>
+                            <div class="offer-body text-align-center">
+                                <h5 class="offer-title">كتاب الكتروني</h5>
+                                <p class="offer-text">
+                                    <a href="details.html">لأنك الله (كتاب إلكتروني)</a>
+                                </p>
+                                <p class="price my-1">
+                                    <span class="h3">17.99</span>.ر.س
+                                    <br><span>شامل الضريبة</span>
+                                </p>
+                                <p id="time-left my-1">
+                                    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                                </p>
+                            </div>
+                            <ul class="offer-footer d-flex justify-content-space-between align-items-center mb-1">
+                                <li>
+                                    <a href="#">
+                                        <object data="imgs/main.svg"></object>
+                                    </a>
+                                </li>
+                                <li class="addProduct">
+                                    <button>
+                                        <object data="imgs/addProduct.svg"></object>
+                                    </button>                
+                                </li>
+                                <li>
+                                    <a href="#"><object data="imgs/exchange.svg"></object></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2">
+                        <div class="offer-item flex-col m-1">
+                            <a href="details.html" class="link">
+                                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=210,height=/https://www.jarir.com/media//catalog/product/5/7/578443.jpg?1" alt="Card image cap">
+                            </a>
+                            <div class="offer-body text-align-center">
+                                <h5 class="offer-title">كتاب الكتروني</h5>
+                                <p class="offer-text">
+                                    <a href="details.html">أمي كم أهواها (كتاب إلكتروني)</a>
                                 </p>
                                 <p class="price my-1">
                                     <span class="h3">17.99</span>.ر.س
@@ -362,7 +491,9 @@
             </div>
         </footer>
         <script src="js/include.js"></script>
-        <script src="js/app.js"></script>
+        <!-- <script src="js/app.js"></script> -->
+        <script src="js/myPOP.js"></script>
+        <script src="js/search.js"></script>
     </body>
     <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
 </html>
