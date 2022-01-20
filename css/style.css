@@ -465,6 +465,18 @@ header {
     transform: rotateY(180deg);
 }
 
+.main-nav .cart-btn .cart-quantity {
+    color: white;
+    background-color: var(--red-color);
+    padding: 0.2em 0.3em;
+    position: absolute;
+    left: 99px;
+    top: 88px;
+    border: solid 2px var(--red-color);
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
 /* ====== Slideshow ======*/
 .slider__nav {
     position: absolute;
