@@ -1258,9 +1258,9 @@ footer .icon-link object {
 }
 
 [class*="-form"] input[type="checkbox"] {
-    width: initial !important;
     background-color: var(--blue-color);
-    transform: scale(2);
+    height: 24px;
+    width: 24px;
 }
 
 .signup-form p {
