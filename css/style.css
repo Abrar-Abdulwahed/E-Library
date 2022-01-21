@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 /*================ Global Style =================*/
 :root {
@@ -251,12 +251,20 @@ h6 {
     padding-top: 24px;
 }
 
+.pb-2 {
+    padding-bottom: 24px;
+}
+
 .px-2 {
     padding-inline: 24px;
 }
 
 .py-1 {
     padding-block: 12px;
+}
+
+.py-2 {
+    padding-block: 24px;
 }
 
 .m-1 {
@@ -882,7 +890,6 @@ section.current-offers object {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 40%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -1112,7 +1119,7 @@ section.current-offers object {
     margin: 15px 0px;
 }
 
-.cart-section .form_wrapper input[type="text"], input[type="email"] {
+.cart-section .form_wrapper input[type="text"], .cart-section .form_wrapper input[type="email"] {
     outline: none;
     border: none;
     background-color: lightgrey;
@@ -1121,11 +1128,11 @@ section.current-offers object {
     transition: all 250ms;
 }
 
-.cart-section .form_wrapper input[type="text"]:focus, input[type="email"]:focus {
+.cart-section .form_wrapper input[type="text"]:focus, .cart-section input[type="email"]:focus {
     opacity: 0.5;
 }
 
-.cart-section .form_wrapper input[type="button"], input[type="submit"] {
+.cart-section .form_wrapper input[type="button"], .cart-section input[type="submit"] {
     margin-top: 20px !important;
     cursor: pointer;
     outline: none;
@@ -1137,7 +1144,7 @@ section.current-offers object {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
 }
 
-.cart-section .form_wrapper input[type="button"]:hover, input[type="submit"]:hover {
+.cart-section .form_wrapper input[type="button"]:hover, .cart-section input[type="submit"]:hover {
     background-color: darkgrey;
     color: white;
 }
@@ -1228,9 +1235,14 @@ footer .icon-link object {
 }
 
 /*======================= Signup Page ==========================*/
-.signup-form h2 {
+[class*="-form"] h2 {
     border-bottom: 2px solid var(--2nd-border-color);
     padding-bottom: 3px;
+}
+
+[class*="-form"] label {
+    position: relative;
+    top: 2px;
 }
 
 .signup-form input[type="submit"], .signup-form input[type="text"]#confirmCode {
@@ -1238,8 +1250,18 @@ footer .icon-link object {
     text-align: center;
 }
 
-.signup-form input:not([type="submit"]) {
+[class*="-form"] input:not([type="submit"]) {
     background-color: var(--1st-input-bg);
+    width: 100%;
+}
+
+.signup-form p {
+    text-align: start;
+    color: var(--4th-color);
+}
+
+.signup-form p a {
+    color: var(--main-color);
 }
 
 .signup-form .cbx {
@@ -1318,84 +1340,20 @@ body {
 }
 
 /* ========== login-container ========== */
-.login-container {
-    margin: 6% auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-container h1 {
-    border-bottom: 1.5px solid rgb(223, 220, 220);
-    width: 100%;
+.login-form input[type="submit"] {
+    background-color: var(--red-color);
     text-align: center;
-    padding: 10px;
-    color: #272f33;
-    font-size: 1.3em;
-}
-
-.login-form-container {
-    margin-top: 2.3em;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.login-container input {
-    width: 100%;
-    margin-top: 7px;
-    height: 4em;
-    padding: 0.5em;
-    border: none;
-    border-radius: var(--border-radius-5);
-}
-
-.login-container input::placeholder {
-    color: #8492a6;
-}
-
-.login-container input[type='email'],
-.login-container input[type='password'] {
-    background-color: #eff2f7;
-}
-
-.login-container input[type='submit'] {
-    background-color: #d4050b;
-    height: 3em;
-    font-family: 'Tajawal', 'Poppins', 'Work Sans', sans-serif;
-    color: #fefbfb;
-    font-weight: 700;
-    font-size: 1.1em;
-}
-
-.login-form-container span {
-    display: inline-block;
-    color: #0359ce;
-    font-weight: 800;
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
+    color: #fff;
 }
 
 .login-form .have-account {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    color: #656769;
-    font-size: 1em;
-    padding-bottom: 20px;
+    margin-top: 60px;
 }
 
 .login-form .have-account button {
-    font-family: 'Tajawal', 'Poppins', 'Work Sans', sans-serif;
     color: #656769;
     font-size: 1.1em;
     margin-top: 0.5rem;
-    border: none;
     border-radius: var(--border-radius-5);
     padding: 10px 30px;
     background-color: #fff;
@@ -1404,8 +1362,9 @@ body {
 }
 
 .login-form .have-account button:hover {
+    background-color: var(--main-color);
     color: #fff;
-    background: #42526e;
+    border: 1px solid var(--main-color);
 }
 
 .login-form .close {
