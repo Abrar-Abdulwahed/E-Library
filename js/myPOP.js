@@ -1,4 +1,7 @@
 let loginPage = `
+                <button class="close-btn" id="close_btn" onclick="closeForm()">
+                    <img src="imgs/cancel.svg" alt="">
+                </button>
                 <div class="login-form py-1">
                     <div class="row justify-content-center">
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-9">
@@ -24,9 +27,11 @@ let loginPage = `
                     </div>
                 </div>
                `;
-// let loginPage="<div>h</div>";
 let signupPage = `
-                <div class="signup-form my-2">
+                <button class="close-btn" id="close_btn" onclick="closeForm()">
+                    <img src="imgs/cancel.svg" alt="">
+                </button>
+                <div class="signup-form py-2">
                     <div class="row justify-content-center">
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-9">
                             <h2 class="h3 my-2 text-align-center">إنشاء حساب</h2>
@@ -94,11 +99,11 @@ let signupPage = `
                     </div>
                 </div>
                 `;
-// slideshow Modal
-// id="needLogin2" onclick="login()"
+// Signup/Login Modal
 var modal = document.getElementById("modal-dialog");
 var loginElem = document.getElementById("needLogin");
 var signupElem = document.getElementById("needSignup");
+var closeBTN = document.getElementById('close_btn');
 
 var span = document.getElementsByClassName("close")[0];
 
@@ -118,11 +123,13 @@ function signup() {
     document.getElementById('modal-content').innerHTML = signupPage;
     document.getElementById('modal-dialog').style.display = "flex";
 }
+function closeForm(){
+    document.getElementById('modal-content').innerHTML = '';
+    document.getElementById("modal-dialog").style.display = "none";
+}
 // span.onclick = function() {
 //   modal.style.display = "none";
 // }
-"<button onclick='signin()'>انشاء حساب جديد</button>"
-"<button onclick='document.getElementById('modal-content').innerHTML = signupPage;document.getElementById('modal-dialog').style.display = 'block';'>انشاء حساب جديد</button>"
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

@@ -352,6 +352,23 @@ h6 {
     color: var(--red-color);
 }
 
+.close-btn {
+    cursor: pointer;
+    background-color: red;
+    margin: .3em;
+    display: inherit;
+    border-radius: var(--border-radius-2);
+}
+
+.close-btn img {
+    width: 24px;
+    padding: 6px !important;
+}
+
+.close-btn:hover {
+    color: var(--red-color);
+}
+
 /*================ Modal =================*/
 
 .modal-content {
@@ -360,18 +377,6 @@ h6 {
     padding: 20px;
 }
 
-.close-btn {
-    color: #aaaaaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: var(--red-color);
-    background-color: #fff;
-    border-radius: var(--border-radius-5);
-}
 
 .modal {
     display: none;
@@ -1298,20 +1303,6 @@ footer .icon-link object {
     background-color: var(--main-color);
     color: #fff;
     border: 1px solid var(--main-color);
-}
-
-.login-form .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.login-form .close:hover,
-.login-form .close:focus {
-    color: #d4050b;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 @media (max-width: 484px) {
