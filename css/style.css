@@ -1238,7 +1238,7 @@ footer .bottom-footer {
     padding: 2.3rem;
     gap: 12px;
     text-align: center !important;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 footer .bottom-footer img {
@@ -1497,6 +1497,10 @@ footer .bottom-footer p {
 
     .md-text-align-end {
         text-align: left !important;
+    }
+
+    .md-mr-6 {
+        margin-right: 6rem;
     }
 }
 
