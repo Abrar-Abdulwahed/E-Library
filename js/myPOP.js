@@ -69,16 +69,7 @@ let signupPage = `
                                 </div>
                                 <div class="form-control mt-1">
                                     <input id="cbx-privacy" type="checkbox" checked />
-                                    <label class="cbx" for="cbx-privacy">
-                                        <div class="flip">
-                                            <div class="front"></div>
-                                            <div class="back">
-                                                <svg width="16" height="14" viewBox="0 0 16 14">
-                                                    <path d="M2 8.5L6 12.5L14 1.5"></path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </label>
+                                    <label for="cbx-privacy"></label>
                                     <p class="pr-1">
                                         أوافق على
                                         <a href="https://www.jarir.com/terms_and_conditions" target="_blank">
@@ -88,16 +79,7 @@ let signupPage = `
                                 </div>
                                 <div class="form-control mt-1">
                                     <input id="cbx-subscribe" type="checkbox" checked />
-                                    <label class="cbx" for="cbx-subscribe">
-                                        <div class="flip">
-                                            <div class="front"></div>
-                                            <div class="back">
-                                                <svg width="16" height="14" viewBox="0 0 16 14">
-                                                    <path d="M2 8.5L6 12.5L14 1.5"></path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </label>
+                                    <label for="cbx-subscribe"></label>
                                     <p class="pr-1"> أوافق للانضمام للنشرة البريدية</p>
                                 </div>
                                 <div class="form-control mt-1">
