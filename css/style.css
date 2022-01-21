@@ -7,6 +7,7 @@
     --3rd-color: #eff2f7;
     --4th-color: #a6a6a6;
     --5th-color: #e7e7e7;
+    --6th-color: #444444;
     --1st-input-bg: #eff2f7;
     --2nd-input-bg: #e5e9f4;
     --3rd-input-bg: #f3f3f3;
@@ -178,6 +179,10 @@ h6 {
     text-align: center;
 }
 
+.text-align-end {
+    text-align: end;
+}
+
 .btn {
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -244,6 +249,10 @@ h6 {
 
 .pt-2 {
     padding-top: 24px;
+}
+
+.pt-5 {
+    padding-top: 60px;
 }
 
 .pb-2 {
@@ -981,7 +990,6 @@ section.offer-section object {
     color: var(--main-color);
 }
 
-
 .cart-section .blockquote span a {
     display: block;
     color: var(--blue-color) !important;
@@ -1082,7 +1090,6 @@ section.offer-section object {
     background-color: darkgrey !important;
 }
 
-
 .cart-section .form_wrapper .msf_line {
     opacity: 0.3;
     background: lightgrey;
@@ -1095,7 +1102,6 @@ section.offer-section object {
     position: absolute;
     z-index: 1;
 }
-
 
 .cart-section .form_wrapper fieldset {
     display: flex;
@@ -1156,15 +1162,14 @@ section.offer-section object {
 /*================= Footer ==================*/
 footer {
     background-color: #353535;
-    grid-area: f;
-    padding: 60px 0;
     text-align: right;
+    padding-top: 5rem;
+    line-height: 1.6;
 }
 
 footer h2 {
     color: var(--4th-color);
     border-bottom: 2px solid var(--1st-border-color);
-    padding-bottom: 3px;
 }
 
 footer h2.subscribe {
@@ -1177,7 +1182,7 @@ footer ul {
 }
 
 footer ul li {
-    padding: .6em 0;
+    padding: .3em 0;
 }
 
 footer *:not(h2) {
@@ -1223,10 +1228,33 @@ footer .icon-link {
     height: 40px !important;
 }
 
-
 footer .icon-link object {
     max-width: 100%;
     height: auto;
+}
+
+footer .bottom-footer {
+    background-color: var(--5th-color);
+    padding: 2.3rem;
+    gap: 12px;
+    text-align: center !important;
+    justify-content: center;
+}
+
+footer .bottom-footer img {
+    width: 4rem;
+    margin: 0 .1rem;
+    padding-inline: 4px;
+    border-radius: var(--border-radius-5);
+    cursor: pointer;
+}
+
+footer .bottom-footer p, footer .bottom-footer a {
+    color: var(--6th-color);
+}
+
+footer .bottom-footer p {
+    text-align: center;
 }
 
 /*======================= Signup Page ==========================*/
@@ -1461,6 +1489,14 @@ footer .icon-link object {
 
     .d-md-block {
         display: block !important;
+    }
+
+    .md-justify-content-space-between {
+        justify-content: space-between !important;
+    }
+
+    .md-text-align-end {
+        text-align: left !important;
     }
 }
 
