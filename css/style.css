@@ -17,8 +17,9 @@
     --yellow-light-color: #fffbeb;
     --blue-color: #4182dd;
     --blue-dark-color: #4182dd;
-    --border-radius-5: 5px;
     --border-radius-1: 1px;
+    --border-radius-2: 2px;
+    --border-radius-5: 5px;
     --padding-02: 2rem;
     --1st-box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 30%);
     --2nd-box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%), 0 3px 3px -2px rgb(0 0 0 / 12%), 0 3px 4px 0 rgb(0 0 0 / 14%);
@@ -251,6 +252,10 @@ h6 {
 
 .px-2 {
     padding-inline: 24px;
+}
+
+.px-3 {
+    padding-inline: 36px;
 }
 
 .py-1 {
@@ -597,64 +602,72 @@ h6 {
         transform: translateX(-600%);
     }
 } */
+/*================= Category ==================*/
+.category-section .row {
+    gap: 26px;
+}
+
+.category-section .category-item {
+    box-shadow: var(--1st-box-shadow);
+    border-radius: var(--border-radius-5);
+}
 
 /*================= Offers ==================*/
-section.current-offers .offer-item {
-    padding: .75rem 0;
+section.offer-section .row {
+    gap: .8em;
+}
+
+section.offer-section .offer-item {
     border: 1px solid var(--2nd-border-color);
     box-shadow: var(--1st-box-shadow);
     border-radius: var(--border-radius-5);
-    padding: 0 10px;
+    padding: 0 .8em;
 }
 
-section.current-offers .offer-item:first-child {
-    margin-right: 0 !important;
-}
-
-section.current-offers .offer-item:hover {
+section.offer-section .offer-item:hover {
     border-color: var(--red-color);
 }
 
-section.current-offers .offer-body {
+section.offer-section .offer-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     text-align: center;
 }
 
-section.current-offers .offer-text {
+section.offer-section .offer-text {
     color: var(--main-color);
 
 }
 
-section.current-offers .offer-text a {
+section.offer-section .offer-text a {
     color: inherit;
 }
 
-section.current-offers .price span:last-child {
+section.offer-section .price span:last-child {
     font-size: 12px !important;
     color: var(--5th-color)
 }
 
-section.current-offers #time-left {
+section.offer-section #time-left {
     color: var(--main-color);
     font-weight: 900 !important;
     border: 1px solid var(--main-color)
 }
 
-section.current-offers .offer-footer {
-    padding-inline: 1.5rem;
+section.offer-section .offer-footer {
+    padding-inline: .5rem;
 }
 
-section.current-offers .offer-footer>li {
+section.offer-section .offer-footer>li {
     cursor: pointer;
 }
 
-section.current-offers .offer-footer .addProduct button {
+section.offer-section .offer-footer .addProduct button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-height: 40px;
-    min-width: 40px;
+    height: 2.6rem;
+    width: 2.6rem;
     border-radius: 100px;
     background: var(--red-color);
     color: #fff;
@@ -663,7 +676,12 @@ section.current-offers .offer-footer .addProduct button {
     box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%), 0 3px 3px -2px rgb(0 0 0 / 12%), 0 3px 4px 0 rgb(0 0 0 / 14%);
 }
 
-section.current-offers object {
+section.offer-section .offer-footer button img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+section.offer-section object {
     width: 25px;
     height: 25px;
 }
