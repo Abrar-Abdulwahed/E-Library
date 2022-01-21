@@ -37,16 +37,9 @@
 body {
     color: var(--main-color);
     -webkit-font-smoothing: antialiased;
-    /* display: grid;
-    grid-template-areas: "h h h h h h h h h h h h h",
-        "m m m m m m m m m m m m",
-        "f f f f f f f f f f f f";
-    grid-template-rows: 50px 1fr 30px;
-    grid-template-columns: 150px 1fr; */
 }
 
 img {
-    /* width: 100%; */
     vertical-align: middle;
 }
 
@@ -369,7 +362,6 @@ h6 {
     color: var(--red-color);
 }
 
-/*================ Modal =================*/
 .modal {
     display: none;
     position: fixed;
@@ -383,14 +375,7 @@ h6 {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-header {
-    /* grid-area: 'header';
-    display: grid;
-    grid-area: "tn tn tn tn tn tn tn tn tn tn tn tn",
-        "mn mn mn mn mn mn mn mn mn mn mn mn"; */
-}
-
-
+/*================ Modal =================*/
 .top-nav {
     grid-area: "tn";
     background-color: #f9fafc;
@@ -920,24 +905,6 @@ section.current-offers object {
     }
 }
 
-/* The Close Button */
-.close {
-    color: var(--red-color);
-    font-size: 3em !important;
-    font-weight: bold;
-    margin: 2px 15px;
-    background-color: #eeee;
-    padding: 0 20px;
-    transition: all .5s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    background-color: var(--red-color);
-    cursor: pointer;
-}
-
 /*================= Cart ==================*/
 .cart-section img {
     vertical-align: initial;
@@ -977,7 +944,6 @@ section.current-offers object {
     border-right: 5px solid var(--yellow-color);
     background: var(--yellow-light-color);
     border-radius: var(--border-radius-5);
-    /* width: 60%; */
 }
 
 .cart-section .blockquote b {
