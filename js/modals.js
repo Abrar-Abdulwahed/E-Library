@@ -95,15 +95,14 @@ let signupPage = `
                     </div>
                 </div>
                 `;
-// Signup/Login Modal
+
 var signup_login_modal = document.getElementById("signup-login-modal");
-var open_slideShow_modal = document.getElementById("openSlideshowModal");
 var slideshow_modal = document.getElementById("slideShowModal");
-var loginElem = document.getElementById("needLogin");
-var signupElem = document.getElementById("needSignup");
+// var open_slideShow_modal = document.getElementById("openSlideshowModal");
+// var loginElem = document.getElementById("openLoginModal");
+// var signupElem = document.getElementById("openSignupModal");
 var closeBTN = document.getElementById('close_btn');
 
-var span = document.getElementsByClassName("close")[0];
 function openModal(modalName, ...other){
     document.getElementById(modalName).style.display = "flex";
     if(modalName == "signup-login-modal"){
@@ -116,11 +115,9 @@ function openModal(modalName, ...other){
 function closeModal(modalName){
     document.getElementById(modalName).style.display = "none";
 }
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+
 window.onclick = function(event) {
-  if (event.target == signup_login_modal) {
-    signup_login_modal.style.display = "none";
+  if (event.target == signup_login_modal || event.target == slideshow_modal) {
+    event.target.style.display = "none";
   }
 }
