@@ -9,180 +9,6 @@
         <base href="../">
     </head>
     <body>
-        <header>
-            <div class="top-nav">
-                <div class="container"> 
-                    <ul class="row align-content-center justify-content-space-between">
-                        <li>
-                            <a href="#" onclick="openForm()">
-                                <object data="imgs/register.svg"></object>
-                                <b>ادخل لحسابك أو سجل الآن</b> 
-                            </a>
-                             <!-- Modal -->
-                            <div id="modal-dialog" class="modal">
-                                 <!-- Modal content -->
-                                <div class="modal-content">
-                                     <!-- Close Button -->
-                                    <button class="close-btn" onclick="closeForm()">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                    <div class="login-form">
-                                        <div class="login-container">
-                                            <h1>تسجيل الدخول</h1>
-                                            <div class="login-form-container">
-                                                <form action="">
-                                                        <input type="email" name="email" id="email" class="email" placeholder="البريد الإلكتروني أو رقم الجوال">
-                                                        <input type="password" name="password" id="password" class="password" placeholder="كلمة السر">
-                                                        <span>نسيت؟</span>
-                                                        <input type="submit" value="تسجيل الدخول">
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="have-account">
-                                            <p>ليس لديك حساب؟</p>
-                                            <a href="signup.html">
-                                                <button>إنشاء حساب جديد</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <object data="imgs/main.svg"></object>
-                                الرئيسية
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <object data="imgs/who.svg"></object>
-                                من نحن
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <object data="imgs/warranty.svg"></object>
-                                اتصل بنا
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
-                                <object data="imgs/help.svg"></object>
-                                المساعدة
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <object data="imgs/privacy.svg"></object>
-                                سياسة الخصوصية
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <object data="imgs/saudi.svg"></object>
-                                YER اليمن
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                English
-                                <object data="imgs/language.svg"></object>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-nav">
-                <div class="container">
-                    <div class="row justify-content-space-between align-items-center">
-                        <div class="logo col-md-2">
-                            <a href="#" class="logo">
-                                <img src="imgs/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <form action="" class="d-flex justify-content-space-between">
-                                <label for="header_search"></label>
-                                <div class="relative f-grow-1">
-                                    <input
-                                        id="header_search"
-                                        type="search"
-                                        name="header_search"
-                                        placeholder="البحث" class="w-100">
-                                    <!-- <ul class="search-category absolute left-2 center-v ml-1 d-md-block">
-                                        <li>تلفزيون</li>
-                                        <li>سامسونج</li>
-                                        <li>هواوي</li>
-                                        <li>آيباد</li>
-                                        <li>ساعة آبل</li>
-                                        <li>سماعات</li>
-                                        <li>آيفون</li>
-                                    </ul> -->
-                                    <button type="submit" name="header_search_submit" class="absolute left-1 center-v">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-1">
-                            <button class="cart-btn">
-                                <object data="imgs/cart.svg"></object>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="mySlider container">
-                    <div class="slideshow">
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-2212-formula1-cb-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1301-office-bags-50percent-discount-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-070122-skyworth-smart-tv-cb-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-moto-g31-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1201-samsung_s21fe_5g_trade_in-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1601-huawei-watch-gt-runner-po-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-b2s-2022-banners-ar1.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- <div class="prevNext w-100">
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                    </div> -->
-                    <div class="slider__nav">
-                        <a class="slider__navlink" href="#slides__1"></a>
-                        <a class="slider__navlink" href="#slides__2"></a>
-                        <a class="slider__navlink" href="#slides__3"></a>
-                        <a class="slider__navlink" href="#slides__4"></a>
-                    </div>
-                </div>
-            </div>
-        </header>
         <section class="details-section">
             <div class="container">
                 <ul class="breadcrumb d-flex">
@@ -191,178 +17,45 @@
                     <li><a href="#">كتب إلكترونية</a></li>
                     <li>لأنك الله (كتاب إلكتروني)</li>
                 </ul>
-                <div class="row">
-                    <!-- https://www.jarir.com/media//catalog/product/5/7/578443.jpg -->
-                    <div class="col-xs-12 col-sm-12 col-md-4 align-self-center">
-                        <div class="item-details flex-col m-1">
-                                <img src="imgs/logo.png" alt="Card image cap" id="openslideshowModal">
-                                <ul class="another-images d-flex justify-content-space-around my-2">
-                                    <li><img src="imgs/logo.png" alt="Card image cap" width="20"></li>
-                                    <li><img src="imgs/logo.png" alt="Card image cap" width="20"></li>
-                                    <li><img src="imgs/logo.png" alt="Card image cap" width="20"></li>   
-                                    <li><img src="imgs/logo.png" alt="Card image cap" width="20"></li>  
-                                    <li><img src="imgs/logo.png" alt="Card image cap" width="20"></li>  
-                                </ul>
-                        </div>
-                        <div id="slideshowModal" class="slideshow-modal">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
+                <div class="row justify-content-space-between">
+                    <div class="col-md-3 item-images">
+                        <img src="imgs/books/book1.jpg" alt="item" onclick="openModal('slideShowModal')" >
+                        <ul class="other-images d-flex justify-content-center g-10 mt-2">
+                            <li><img src="imgs/books/book1.jpg" alt="item-part" width="20"></li>
+                            <li><img src="imgs/books/book1.jpg" alt="item-part" width="20"></li>
+                            <li><img src="imgs/books/book1.jpg" alt="item-part" width="20"></li>   
+                            <li><img src="imgs/books/book1.jpg" alt="item-part" width="20"></li>  
+                            <li><img src="imgs/books/book1.jpg" alt="item-part" width="20"></li>  
+                        </ul>
+                        <div id="slideShowModal" class="modal">
+                            <div id="slideShowModal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4">
+                                <span class="close-btn" onclick="closeModal('slideShowModal')">&times;</span>
                                 <div class="gallery">
                                     <div class="gallery-container">
-                                      <img class="gallery-item gallery-item-1" src="imgs/logo.png" data-index="1">
-                                      <img class="gallery-item gallery-item-2" src="imgs/logo.png" data-index="2">
-                                      <img class="gallery-item gallery-item-3" src="imgs/logo.png" data-index="3">
-                                      <img class="gallery-item gallery-item-4" src="imgs/logo.png" data-index="4">
-                                      <img class="gallery-item gallery-item-5" src="imgs/logo.png" data-index="5">
+                                      <img class="gallery-item gallery-item-1" src="imgs/books/book1.jpg" data-index="1">
+                                      <img class="gallery-item gallery-item-2" src="imgs/books/book1.jpg" data-index="2">
+                                      <img class="gallery-item gallery-item-3" src="imgs/books/book1.jpg" data-index="3">
+                                      <img class="gallery-item gallery-item-4" src="imgs/books/book1.jpg" data-index="4">
+                                      <img class="gallery-item gallery-item-5" src="imgs/books/book1.jpg" data-index="5">
+                                      <img class="gallery-item gallery-item-5" src="imgs/books/book1.jpg" data-index="6">
+                                      <img class="gallery-item gallery-item-5" src="imgs/books/book1.jpg" data-index="7">
                                     </div>
                                     <div class="gallery-controls"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="col-md-4">
+                        <span class="h3">لأنك الله (كتاب إلكتروني)</span>
+                    </div>
+                    <div class="col-md-4">
                         <span class="h3">كبرياء وهوى (كتاب إلكتروني)</span>
                     </div>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <div class="row justify-content-space-between">
-                    <div class="col-sm-12 col-lg-3">
-                        <h2 class="subscribe d-md-block">انضم إلى نشرتنا البريدية</h2>
-                        <form action="" class="d-flex">
-                            <div class="form-control email">
-                                <label for="subscribe"></label>
-                                <input
-                                    id="subscribe"
-                                    type="email"
-                                    name="subscribe"
-                                    placeholder="ادخل بريدك الالكتروني" class="w-100">
-                                <i class="fa fa-lock"></i>
-                            </div>
-                            <div class="form-control">
-                                <input type="submit" value="اشتراك">
-                            </div>     
-                        </form>
-                        <h2 class="my-2">تواصل معنا</h2>
-                        <div class="d-flex f-dir-row-reverse justify-content-space-around my-2">
-                            <a href="#" class="icon-link">
-                                <object data="imgs/facebook.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/twitter.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/youtube.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/instagram.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/linkedin.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/snapshat.svg"></object>
-                            </a>
-                            <a href="#" class="icon-link">
-                                <object data="imgs/music.svg"></object>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <h2>خدمة العملاء</h2>
-                        <ul class="d-md-block">
-                            <li>
-                                <a href="#">مبيعات الشركات</a>
-                            </li>
-                            <li>
-                                <a href="#">الأسئلة المتكررة</a>
-                            </li>
-                            <li>
-                                <a href="#">دليل التسوق والمطبوعات</a>
-                            </li>
-                            <li>
-                                <a href="#">مواقع المعارض</a>
-                            </li>
-                            <li>
-                                <a href="#">سياسة الضمان</a>
-                            </li>
-                            <li>
-                                <a href="#">سياسة الاسترجاع والاستبدال</a>
-                            </li>
-                            <li>
-                                <a href="#">اتصل بنا</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <h2>خدمات جرير</h2>
-                        <ul class="d-md-block">
-                            <li>
-                                <a href="#">خدمة تقسيط المشتريات</a>
-                            </li>
-                            <li>
-                                <a href="#">خدمات ما بعد البيع</a>
-                            </li>
-                            <li>
-                                <a href="#">خدمات الحماية الشاملة</a>
-                            </li>
-                            <li>
-                                <a href="#">حماية أجهزة آبل</a>
-                            </li>
-                            <li>
-                                <a href="#">بطاقة خصم جرير</a>
-                            </li>
-                            <li>
-                                <a href="#">بطاقة جرير للهدايا</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <h2>روابط سريعة</h2>
-                        <ul class="d-md-block">
-                            <li>
-                                <a href="#">إصدارات جرير</a>
-                            </li>
-                            <li>
-                                <a href="#">قارئ جرير</a>
-                            </li>
-                            <li>
-                                <a href="#">شركاء برامج المكافآت</a>
-                            </li>
-                            <li>
-                                <a href="#">خدمات شركات الاتصالات</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <h2>عن جرير</h2>
-                        <ul class="d-md-block">
-                            <li>
-                                <a href="#">من نحن</a>
-                            </li>
-                            <li>
-                                <a href="#">الحوكمة</a>
-                            </li>
-                            <li>
-                                <a href="#">علاقات المستثمرين</a>
-                            </li>
-                            <li>
-                                <a href="#">الاستدامة</a>
-                            </li>
-                            <li>
-                                <a href="#">الأخبار</a>
-                            </li>
-                            <li>
-                                <a href="#">فرص العمل</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="js/app.js"></script>
+        <!-- <script src="js/app.js"></script> -->
+        <script src="js/modals.js"></script>
     </body>
-    <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script> -->
 </html>

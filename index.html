@@ -11,72 +11,69 @@
         <header>
             <div class="top-nav">
                 <div class="container">
-                    
                     <ul class="row align-content-center justify-content-space-between">
                         <li>
                             <a href="#">
-                                <object data="imgs/register.svg"></object>
+                                <img src="imgs/register.svg">
                                 <b>
-                                    <span id="needLogin">
+                                    <span id="needLogin" onclick="openModal('signup-login-modal', 'loginForm')">
                                         ادخل لحسابك
                                     </span>
                                     أو
-                                    <span id="needSignup">
+                                    <span id="needSignup" onclick="openModal('signup-login-modal', 'signupForm')">
                                         سجل الآن
                                     </span>
                                 </b> 
                             </a>
-                             <!-- Modal -->
-                            <div id="modal-dialog" class="modal">
-                                 <!-- Modal content -->
-                                <div id="modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4">
-                                </div>
-                            </div>
                         </li>
                         <li>
                             <a href="#">
-                                <object data="imgs/main.svg"></object>
+                                <img src="imgs/main.svg">
                                 الرئيسية
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <object data="imgs/who.svg"></object>
+                                <img src="imgs/who.svg">
                                 من نحن
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <object data="imgs/warranty.svg"></object>
+                                <img src="imgs/warranty.svg">
                                 اتصل بنا
                             </a>
                         </li>
                         
                         <li>
                             <a href="#">
-                                <object data="imgs/help.svg"></object>
+                                <img src="imgs/help.svg">
                                 المساعدة
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <object data="imgs/privacy.svg"></object>
+                                <img src="imgs/privacy.svg">
                                 سياسة الخصوصية
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <object data="imgs/saudi.svg"></object>
+                                <img src="imgs/saudi.svg">
                                 YER اليمن
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 English
-                                <object data="imgs/language.svg"></object>
+                                <img src="imgs/language.svg">
                         </li>
                     </ul>
                 </div>
+            </div>
+             <!-- Modal -->
+            <div id="signup-login-modal" class="modal">
+                <div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
             </div>
             <div class="main-nav">
                 <div class="container">

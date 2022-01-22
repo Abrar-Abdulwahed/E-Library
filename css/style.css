@@ -1,5 +1,155 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
+.gallery {
+    width: 100%;
+}
+
+.gallery-container {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.gallery-item {
+    height: 150px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+    z-index: 0;
+}
+
+.gallery-item-1 {
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2,
+.gallery-item-4 {
+    height: 200px;
+    opacity: 1;
+    width: 200px;
+    z-index: 1;
+}
+
+.gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 2;
+}
+
+.gallery-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.gallery-controls button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+
+.gallery-controls button:focus {
+    outline: none;
+}
+
+.gallery-controls-previous {
+    position: relative;
+}
+
+.gallery-controls-previous::before {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    height: 4px;
+    left: -10px;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 4px;
+}
+
+.gallery-controls-previous:hover::before {
+    left: -18px;
+}
+
+.gallery-controls-next {
+    position: relative;
+}
+
+.gallery-controls-next::before {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    height: 4px;
+    padding: 2px;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right 0.15s ease-in-out;
+    width: 4px;
+}
+
+.gallery-controls-next:hover::before {
+    right: -18px;
+}
+
+.gallery-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery-nav li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected {
+    background: #555;
+}
+
 /*================ Global Style =================*/
 :root {
     --main-color: #42526e;
@@ -211,12 +361,16 @@ h6 {
     width: 100%;
 }
 
+.gx-1 {
+    gap: 0 12px;
+}
+
 .g-5 {
     gap: 5px;
 }
 
-.gx-1 {
-    gap: 0 12px;
+.g-10 {
+    gap: 10px;
 }
 
 /* .p-80 {
@@ -273,6 +427,10 @@ h6 {
 
 .py-2 {
     padding-block: 24px;
+}
+
+.mx-auto {
+    margin-inline: auto;
 }
 
 .m-1 {
@@ -375,8 +533,11 @@ h6 {
     cursor: pointer;
     background-color: red;
     margin: .3em;
-    display: inherit;
     border-radius: var(--border-radius-2);
+    color: #fff;
+    font-size: 20px !important;
+    display: inline-block;
+    padding: 2px 9px;
 }
 
 .close-btn img {
@@ -419,15 +580,10 @@ h6 {
     color: inherit;
 }
 
-.top-nav li object {
+.top-nav li img {
     width: 15px;
-    height: auto;
     vertical-align: middle;
     margin-left: 20px;
-}
-
-.top-nav li img {
-    padding-left: 10px;
 }
 
 .main-nav {
@@ -740,21 +896,27 @@ section.offer-section object {
     text-decoration: underline;
 }
 
-.details-section .item-details {
-    padding: 1rem;
+.details-section .item-images {
+    padding: .4rem 1rem;
     border: 1px solid var(--2nd-border-color);
     box-shadow: var(--1st-box-shadow);
     border-radius: var(--border-radius-5);
 }
 
-.details-section .item-details img {
-    max-width: fit-content;
-    position: relative;
-    right: 50%;
-    transform: translateX(50%);
+.details-section .item-images>img {
+    padding: 0 1.8rem;
+    width: 100%;
 }
 
-.details-section .gallery {
+.details-section .other-images li {
+    border: 1px solid var(--main-color);
+    padding: 2px 8px;
+    border-radius: var(--border-radius-5);
+    box-shadow: var(--1st-box-shadow);
+    cursor: pointer;
+}
+
+.details-section .item-details .details-section .gallery {
     width: 100%;
 }
 

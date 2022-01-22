@@ -1,7 +1,5 @@
 let loginPage = `
-                <button class="close-btn" id="close_btn" onclick="closeForm()">
-                    <img src="imgs/cancel.svg" alt="">
-                </button>
+                <span class="close-btn" id="close_btn" onclick="closeModal('signup-login-modal')">&times;</span>
                 <div class="login-form py-1">
                     <div class="row justify-content-center">
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-9">
@@ -21,16 +19,14 @@ let loginPage = `
                             </form>
                             <div class="have-account text-align-center pb-2">
                                 <p>ليس لديك حساب؟</p>
-                                <button class="btn" onclick="signup()">إنشاء حساب جديد</button>
+                                <button class="btn" onclick="openModal('signup-login-modal', 'signupForm')">إنشاء حساب جديد</button>
                             </div>
                         </div>
                     </div>
                 </div>
                `;
 let signupPage = `
-                <button class="close-btn" id="close_btn" onclick="closeForm()">
-                    <img src="imgs/cancel.svg" alt="">
-                </button>
+                <span class="close-btn" id="close_btn" onclick="closeModal('signup-login-modal')">&times;</span>
                 <div class="signup-form py-2">
                     <div class="row justify-content-center">
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-9">
@@ -93,45 +89,38 @@ let signupPage = `
                             </form>
                             <span class="text-align-center d-block mt-2 my-2">
                                 لديك حساب؟
-                                <span onclick="login()" class="link">تسجيل الدخول</span>
+                                <span onclick="openModal('signup-login-modal', 'loginForm')" class="link">تسجيل الدخول</span>
                             </span>
                         </div>
                     </div>
                 </div>
                 `;
 // Signup/Login Modal
-var modal = document.getElementById("modal-dialog");
+var signup_login_modal = document.getElementById("signup-login-modal");
+var open_slideShow_modal = document.getElementById("openSlideshowModal");
+var slideshow_modal = document.getElementById("slideShowModal");
 var loginElem = document.getElementById("needLogin");
 var signupElem = document.getElementById("needSignup");
 var closeBTN = document.getElementById('close_btn');
 
 var span = document.getElementsByClassName("close")[0];
-
-loginElem.addEventListener('click', ()=>{
-    document.getElementById('modal-content').innerHTML = loginPage;
-    document.getElementById("modal-dialog").style.display = "flex";
-});
-signupElem.addEventListener('click', ()=>{
-    document.getElementById('modal-content').innerHTML = signupPage;
-    document.getElementById("modal-dialog").style.display = "flex";
-});
-function login() {
-    document.getElementById('modal-content').innerHTML = loginPage;
-    document.getElementById('modal-dialog').style.display = "flex";
+function openModal(modalName, ...other){
+    document.getElementById(modalName).style.display = "flex";
+    if(modalName == "signup-login-modal"){
+        if(other == "loginForm")
+            document.getElementById('signup-login-modal-content').innerHTML = loginPage;
+        else 
+            document.getElementById('signup-login-modal-content').innerHTML = signupPage;     
+    }
 }
-function signup() {
-    document.getElementById('modal-content').innerHTML = signupPage;
-    document.getElementById('modal-dialog').style.display = "flex";
-}
-function closeForm(){
-    document.getElementById('modal-content').innerHTML = '';
-    document.getElementById("modal-dialog").style.display = "none";
+function closeModal(modalName){
+    document.getElementById(modalName).style.display = "none";
 }
 // span.onclick = function() {
 //   modal.style.display = "none";
 // }
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == signup_login_modal) {
+    signup_login_modal.style.display = "none";
   }
 }

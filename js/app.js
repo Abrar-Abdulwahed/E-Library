@@ -4,14 +4,14 @@ function openForm() {
   document.getElementById("modal-dialog").style.display = "block";
 }
 
-function closeForm() {
-  document.getElementById("modal-dialog").style.display = "none";
+function closeForm(modalName) {
+  document.getElementById(modalName).style.display = "none";
 }
 
 // slideshow Modal
 var modal = document.getElementById("slideshowModal");
 
-var btn = document.getElementById("openslideshowModal");
+var btn = document.getElementById("openSlideshowModal");
 
 var span = document.getElementsByClassName("close")[0];
 
