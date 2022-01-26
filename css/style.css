@@ -479,7 +479,7 @@ h6 {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
@@ -547,7 +547,7 @@ h6 {
 .main-nav {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .main-nav .grid {
