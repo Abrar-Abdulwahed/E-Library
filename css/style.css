@@ -96,7 +96,7 @@ input:not([type="search"]) {
     padding: 10px 20px;
     border-radius: var(--border-radius-5);
     border: 1px solid rgb(212, 212, 212);
-    text-align: right;
+    text-align: start;
 
 }
 
@@ -146,8 +146,8 @@ h6 {
 
 .container {
     width: clamp(50px, 94vw, 100vw);
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 
 .row {
@@ -294,11 +294,11 @@ h6 {
 }
 
 .pr-1 {
-    padding-right: 12px;
+    padding-inline-start: 12px;
 }
 
 .pl-1 {
-    padding-left: 12px;
+    padding-inline-end: 12px;
 }
 
 .pt-1 {
@@ -342,11 +342,11 @@ h6 {
 }
 
 .mr-1 {
-    margin-right: 12px;
+    margin-inline-start: 12px;
 }
 
 .ml-1 {
-    margin-left: 12px;
+    margin-inline-end: 12px;
 }
 
 .mt-1 {
@@ -396,11 +396,11 @@ h6 {
 }
 
 .mr-auto {
-    margin-right: auto;
+    margin-inline-start: auto;
 }
 
 .ml-auto {
-    margin-left: auto;
+    margin-inline-end: auto;
 }
 
 .relative {
@@ -493,7 +493,7 @@ h6 {
     font-size: 1.4em;
     color: var(--4th-color);
     padding: .8em 20px .8em 2.6em;
-    border-right: 5px solid var(--yellow-color);
+    border-inline-start: 5px solid var(--yellow-color);
     background: var(--yellow-light-color);
     border-radius: var(--border-radius-5);
 }
@@ -522,7 +522,7 @@ h6 {
 
 .top-nav li {
     text-align: center;
-    border-left: 1px solid var(--second-color);
+    border-inline-end: 1px solid var(--second-color);
     flex: 1 0 auto;
     padding: 7px 0;
 }
@@ -534,7 +534,7 @@ h6 {
 .top-nav li img {
     width: 15px;
     vertical-align: middle;
-    margin-left: 20px;
+    margin-inline-end: 20px;
 }
 
 .main-nav {
@@ -544,7 +544,7 @@ h6 {
 .main-nav .logo {
     font-size: 40px;
     font-weight: 600;
-    text-align: right;
+    text-align: start;
 }
 
 .main-nav .logo img {
@@ -554,7 +554,7 @@ h6 {
 .main-nav input[type="search"] {
     padding: 10px 20px;
     border-radius: 50px;
-    text-align: right;
+    text-align: start;
     background-color: var(--3rd-color);
 }
 
@@ -570,7 +570,7 @@ h6 {
     border-radius: 50px;
     border: 1px solid var(--main-color);
     font-size: 10px;
-    margin-right: 10px;
+    margin-inline-start: 10px;
 }
 
 .main-nav .cart-btn {
@@ -895,7 +895,7 @@ section.offer-section .card-footer img {
 }
 
 .details-section .item-options .option-buttons li img {
-    margin-left: .6em;
+    margin-inline-end: .6em;
 }
 
 .details-section .brief {
@@ -905,7 +905,7 @@ section.offer-section .card-footer img {
 
 .details-section .spec .table {
     display: table;
-    margin-right: 30px;
+    margin-inline-start: 30px;
     width: 90%;
 }
 
@@ -940,7 +940,7 @@ section.offer-section .card-footer img {
 .details-section .item-reviews button img {
     width: 10px;
     vertical-align: baseline;
-    margin-left: .6em;
+    margin-inline-end: .6em;
 }
 
 .details-section .item-reviews .review {
@@ -1063,7 +1063,7 @@ section.offer-section .card-footer img {
     align-items: center;
     width: 15px;
     height: 15px;
-    margin-left: 2px;
+    margin-inline-end: 2px;
 }
 
 .cart-section .qty-block {
@@ -1148,7 +1148,7 @@ section.offer-section .card-footer img {
     display: block;
     left: 50%;
     margin-top: -29px;
-    margin-left: -35px;
+    margin-inline-end: -35px;
     position: absolute;
     z-index: 1;
 }
@@ -1212,7 +1212,7 @@ section.offer-section .card-footer img {
 /*================= Footer ==================*/
 footer {
     background-color: #353535;
-    text-align: right;
+    text-align: start;
     padding-top: 5rem;
     line-height: 1.6;
 }
@@ -1564,7 +1564,7 @@ footer .bottom-footer p {
     }
 
     .md-mr-3 {
-        margin-right: 3rem;
+        margin-inline-start: 3rem;
     }
 }
 
@@ -1626,6 +1626,6 @@ footer .bottom-footer p {
     }
 
     .lg-text-align-end {
-        text-align: left !important;
+        text-align: end !important;
     }
 }
