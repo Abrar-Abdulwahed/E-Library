@@ -9,17 +9,22 @@
     </head>
     <body>
         <header>
-            <div class="top-nav">
+            <div class="top-nav" id="top-nav">
                 <div class="container">
                     <ul class="row align-content-center justify-content-space-between">
-                        <li class="link">
+                        <li class="menubar-li">
+                            <a href="javascript:void(0);" class="menubar-icon" onclick="menubarFunc()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
                             <img src="imgs/register.svg">
                             <b>
-                                <span id="openLoginModal" onclick="openModal('signup-login-modal', 'loginForm')">
+                                <span onclick="openModal('signup-login-modal', 'loginForm')">
                                     ادخل لحسابك
                                 </span>
                                 أو
-                                <span id="openSignupModal" onclick="openModal('signup-login-modal', 'signupForm')">
+                                <span onclick="openModal('signup-login-modal', 'signupForm')">
                                     سجل الآن
                                 </span>
                             </b>
@@ -74,76 +79,58 @@
                 <div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
             </div>
             <div class="main-nav">
-                <div class="container">
-                    <div class="row justify-content-space-between align-items-center">
-                        <div class="logo col-md-2">
-                            <a href="#" class="logo">
-                                <img src="imgs/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <form action="" class="d-flex justify-content-space-between">
-                                <label for="header_search"></label>
-                                <div class="relative f-grow-1">
-                                    <input
-                                        onkeyup="search_book()"
-                                        id="header_search"
-                                        type="search"
-                                        name="header_search"
-                                        placeholder="البحث"
-                                        class="w-100"
-                                    >
-                                    <!-- <ul class="search-category absolute left-2 center-v ml-1 d-md-block">
-                                        <li>تلفزيون</li>
-                                        <li>سامسونج</li>
-                                        <li>هواوي</li>
-                                        <li>آيباد</li>
-                                        <li>ساعة آبل</li>
-                                        <li>سماعات</li>
-                                        <li>آيفون</li>
-                                    </ul> -->
-                                    <button type="submit" name="header_search_submit" class="absolute left-1 center-v">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-1">
-                            <a class="cart-btn link" href="pages/cart.html">
-                                <img src="imgs/cart.svg">
-                                <span class="cart-quantity" id="cart-quantity">0</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div dir="ltr" class="CSSgal">
-                        <div class="">
-                            <div class="slider">
-                                <!-- <img class="gallery-item" src="imgs/books/book1.jpg" data-index="1"> -->
-                                <img class="slider-item" src="imgs/sliders/slider1.jpg" data-index="2">
-                                <img class="slider-item" src="imgs/sliders/slider2.jpg" data-index="3">
-                                <img class="slider-item" src="imgs/sliders/slider3.jpg" data-index="4">
-                                <img class="slider-item" src="imgs/sliders/slider4.jpg" data-index="5">
-                                <img class="slider-item" src="imgs/sliders/slider5.png" data-index="6">
-                                <img class="slider-item" src="imgs/sliders/slider6.jpg" data-index="7">
-                                <img class="slider-item" src="imgs/sliders/slider7.jpg" data-index="7">
-                            </div>
-                            <a id="arrow-left" onclick="plusSlides(-1)">❮</a>
-                            <a id="arrow-right" onclick="plusSlides(1)">❯</a>
-                            <div class="bullets">
-                                <span class="indicator" onclick="currentSlide(1)"></span>
-                                <span class="indicator" onclick="currentSlide(2)"></span>
-                                <span class="indicator" onclick="currentSlide(3)"></span>
-                                <span class="indicator" onclick="currentSlide(4)"></span>
-                                <span class="indicator" onclick="currentSlide(5)"></span>
-                                <span class="indicator" onclick="currentSlide(6)"></span>
-                                <span class="indicator" onclick="currentSlide(7)"></span>
-                            </div>    
-                        </div>
+                <div class="container">   
+                    <div class="grid">
+                        <a href="#" class="logo">
+                            <img src="imgs/logo.png" alt="">
+                        </a>
+                        <form action="" class="d-flex justify-content-space-between">
+                            <label for="header_search"></label>
+                            <input
+                                onkeyup="search_book()"
+                                id="header_search"
+                                type="search"
+                                name="header_search"
+                                placeholder="البحث"
+                                class="w-100"
+                            >
+                            <button type="submit" name="header_search_submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a class="cart-btn link" href="pages/cart.html">
+                            <img src="imgs/cart.svg">
+                            <span class="cart-quantity" id="cart-quantity">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div dir="ltr" class="CSSgal">
+                <div class="container">
+                    <div class="slider">
+                        <img class="slider-item" src="imgs/sliders/slider1.jpg" data-index="2">
+                        <img class="slider-item" src="imgs/sliders/slider2.jpg" data-index="3">
+                        <img class="slider-item" src="imgs/sliders/slider3.jpg" data-index="4">
+                        <img class="slider-item" src="imgs/sliders/slider4.jpg" data-index="5">
+                        <img class="slider-item" src="imgs/sliders/slider5.png" data-index="6">
+                        <img class="slider-item" src="imgs/sliders/slider6.jpg" data-index="7">
+                        <img class="slider-item" src="imgs/sliders/slider7.jpg" data-index="7">
+                    </div>
+                    <a id="arrow-left" onclick="plusSlides(-1)">❮</a>
+                    <a id="arrow-right" onclick="plusSlides(1)">❯</a>
+                    <div class="bullets">
+                        <span class="indicator" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                        <span class="indicator" onclick="currentSlide(4)"></span>
+                        <span class="indicator" onclick="currentSlide(5)"></span>
+                        <span class="indicator" onclick="currentSlide(6)"></span>
+                        <span class="indicator" onclick="currentSlide(7)"></span>
+                    </div>    
+                </div>
+            </div>
         </header>
-        <section class="category-section p-2">
+        <!-- <section class="category-section p-2">
             <div class="container">
                 <h2 class="h3 mb-1">تصفح حسب القسم</h2>
                 <div class="row py-1 justify-content-center">
@@ -176,23 +163,11 @@
                         <img src="imgs/category/@.svg" alt="" width="40">
                         <span class="d-block mt-1">تربية</span>
                     </div>
-                    <!-- <div class="category-item py-1 px-3 text-align-center">
-                        <img src="imgs/category/tv.svg" alt="" width="40">
-                        <span class="d-block mt-1">كتب إلكترونية</span>
-                    </div>
-                    <div class="category-item py-1 px-3 text-align-center">
-                        <img src="imgs/category/tv.svg" alt="" width="40">
-                        <span class="d-block mt-1">سياحة فندقية</span>
-                    </div>
-                    <div class="category-item py-1 px-3 text-align-center">
-                        <img src="imgs/category/tv.svg" alt="" width="40">
-                        <span class="d-block mt-1">دين</span>
-                    </div> -->
                     <img src="imgs/arrowNext.svg" alt="" width="20px" style="transform: rotate(180deg);">
                 </div>
             </div>
-        </section>
-        <section class="adBanner-section p-2">
+        </section> -->
+        <!-- <section class="adBanner-section p-2">
             <div class="container">
                 <div class="grid g-lg-4 g-sm-2 g-1">
                     <div>
@@ -212,8 +187,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="offer-section p-2">
+        </section> -->
+        <!-- <section class="offer-section p-2">
             <div class="container">
                 <h2 class="h3 mb-1">العروض الحالية</h2>
                 <div class="row g-10 justify-content-center">
@@ -449,7 +424,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <footer>
             <div class="container mb-2">
                 <div class="flex-col md-dir-row justify-content-space-between">
@@ -617,6 +592,7 @@
         <script src="js/slider.js"></script>
         <script src="js/search.js"></script>
         <script src="js/changeLang.js"></script>
+        <script src="js/menuBar.js"></script>
     </body>
-    <!-- <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
 </html>
