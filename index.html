@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Jarir - Elib</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -12,19 +12,17 @@
             <div class="top-nav">
                 <div class="container">
                     <ul class="row align-content-center justify-content-space-between">
-                        <li>
-                            <a href="#">
-                                <img src="imgs/register.svg">
-                                <b>
-                                    <span id="openLoginModal" onclick="openModal('signup-login-modal', 'loginForm')">
-                                        ادخل لحسابك
-                                    </span>
-                                    أو
-                                    <span id="openSignupModal" onclick="openModal('signup-login-modal', 'signupForm')">
-                                        سجل الآن
-                                    </span>
-                                </b> 
-                            </a>
+                        <li class="link">
+                            <img src="imgs/register.svg">
+                            <b>
+                                <span id="openLoginModal" onclick="openModal('signup-login-modal', 'loginForm')">
+                                    ادخل لحسابك
+                                </span>
+                                أو
+                                <span id="openSignupModal" onclick="openModal('signup-login-modal', 'signupForm')">
+                                    سجل الآن
+                                </span>
+                            </b>
                         </li>
                         <li>
                             <a href="#">
@@ -44,7 +42,6 @@
                                 اتصل بنا
                             </a>
                         </li>
-                        
                         <li>
                             <a href="#">
                                 <img src="imgs/help.svg">
@@ -67,11 +64,12 @@
                             <a href="#">
                                 English
                                 <img src="imgs/language.svg">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-             <!-- Modal -->
+            <!-- Modal -->
             <div id="signup-login-modal" class="modal">
                 <div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
             </div>
@@ -87,11 +85,14 @@
                             <form action="" class="d-flex justify-content-space-between">
                                 <label for="header_search"></label>
                                 <div class="relative f-grow-1">
-                                    <input onkeyup="search_book()"
+                                    <input
+                                        onkeyup="search_book()"
                                         id="header_search"
                                         type="search"
                                         name="header_search"
-                                        placeholder="البحث" class="w-100">
+                                        placeholder="البحث"
+                                        class="w-100"
+                                    >
                                     <!-- <ul class="search-category absolute left-2 center-v ml-1 d-md-block">
                                         <li>تلفزيون</li>
                                         <li>سامسونج</li>
@@ -110,58 +111,34 @@
                         <div class="col-md-1">
                             <a class="cart-btn link" href="pages/cart.html">
                                 <img src="imgs/cart.svg">
-                                <span class="cart-quantity">4</span>
+                                <span class="cart-quantity" id="cart-quantity">0</span>
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="mySlider container">
-                    <div class="slideshow">
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-2212-formula1-cb-ar.jpg" alt="">
+                    <div dir="ltr" class="CSSgal">
+                        <div class="">
+                            <div class="slider">
+                                <!-- <img class="gallery-item" src="imgs/books/book1.jpg" data-index="1"> -->
+                                <img class="slider-item" src="imgs/sliders/slider1.jpg" data-index="2">
+                                <img class="slider-item" src="imgs/sliders/slider2.jpg" data-index="3">
+                                <img class="slider-item" src="imgs/sliders/slider3.jpg" data-index="4">
+                                <img class="slider-item" src="imgs/sliders/slider4.jpg" data-index="5">
+                                <img class="slider-item" src="imgs/sliders/slider5.png" data-index="6">
+                                <img class="slider-item" src="imgs/sliders/slider6.jpg" data-index="7">
+                                <img class="slider-item" src="imgs/sliders/slider7.jpg" data-index="7">
+                            </div>
+                            <a id="arrow-left" onclick="plusSlides(-1)">❮</a>
+                            <a id="arrow-right" onclick="plusSlides(1)">❯</a>
+                            <div class="bullets">
+                                <span class="indicator" onclick="currentSlide(1)"></span>
+                                <span class="indicator" onclick="currentSlide(2)"></span>
+                                <span class="indicator" onclick="currentSlide(3)"></span>
+                                <span class="indicator" onclick="currentSlide(4)"></span>
+                                <span class="indicator" onclick="currentSlide(5)"></span>
+                                <span class="indicator" onclick="currentSlide(6)"></span>
+                                <span class="indicator" onclick="currentSlide(7)"></span>
+                            </div>    
                         </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1301-office-bags-50percent-discount-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-070122-skyworth-smart-tv-cb-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-moto-g31-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1201-samsung_s21fe_5g_trade_in-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1601-huawei-watch-gt-runner-po-ar.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="https://www.jarir.com/media/wysiwyg/Saudi/MB/MB-ksa-1001-b2s-2022-banners-ar1.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- <div class="prevNext w-100">
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                        <div>
-                            <a href="#s4" class="arrowPrev"></a>
-                            <a href="#s2" class="arrowNext"></a>
-                        </div>
-                    </div> -->
-                    <div class="slider__nav">
-                        <a class="slider__navlink" href="#slides__1"></a>
-                        <a class="slider__navlink" href="#slides__2"></a>
-                        <a class="slider__navlink" href="#slides__3"></a>
-                        <a class="slider__navlink" href="#slides__4"></a>
                     </div>
                 </div>
             </div>
@@ -169,7 +146,8 @@
         <section class="category-section p-2">
             <div class="container">
                 <h2 class="h3 mb-1">تصفح حسب القسم</h2>
-                <div class="row justify-content-center">
+                <div class="row py-1 justify-content-center">
+                    <img src="imgs/arrowNext.svg" alt="" width="20px">
                     <div class="category-item py-1 px-3 text-align-center">
                         <img src="imgs/category/tv.svg" alt="" width="40">
                         <span class="d-block mt-1">دين</span>
@@ -198,87 +176,304 @@
                         <img src="imgs/category/@.svg" alt="" width="40">
                         <span class="d-block mt-1">تربية</span>
                     </div>
+                    <!-- <div class="category-item py-1 px-3 text-align-center">
+                        <img src="imgs/category/tv.svg" alt="" width="40">
+                        <span class="d-block mt-1">كتب إلكترونية</span>
+                    </div>
+                    <div class="category-item py-1 px-3 text-align-center">
+                        <img src="imgs/category/tv.svg" alt="" width="40">
+                        <span class="d-block mt-1">سياحة فندقية</span>
+                    </div>
+                    <div class="category-item py-1 px-3 text-align-center">
+                        <img src="imgs/category/tv.svg" alt="" width="40">
+                        <span class="d-block mt-1">دين</span>
+                    </div> -->
+                    <img src="imgs/arrowNext.svg" alt="" width="20px" style="transform: rotate(180deg);">
                 </div>
             </div>
         </section>
-        <section class="random-images-section p-2">
+        <section class="adBanner-section p-2">
             <div class="container">
-                <div class="row">
-                    <div><img src="imgs/sliders/slider1.webp" alt=""></div>
-                    <div> <img src="imgs/sliders/slider2.webp" alt=""></div>
-                    <div><img src="imgs/sliders/slider3.webp" alt=""></div>
-                    <div><img src="imgs/sliders/slider4.jpg" alt=""></div>   
-                    <div> <img src="imgs/sliders/slider5.png" alt=""></div>   
+                <div class="grid g-lg-4 g-sm-2 g-1">
+                    <div>
+                        <img src="" id="advert1" alt="" class="advert">
+                    </div>
+                    <div>
+                        <img src="" id="advert2" alt="" class="advert">
+                    </div>
+                    <div>
+                        <img src="" id="advert3" alt="" class="advert">
+                    </div>
+                    <div>
+                        <img src="" id="advert4"  alt="" class="advert">
+                    </div>
+                    <div>
+                        <img src="imgs/sliders/slider8.jpg"  alt="">
+                    </div>
                 </div>
-            </div>   
+            </div>
         </section>
         <section class="offer-section p-2">
             <div class="container">
                 <h2 class="h3 mb-1">العروض الحالية</h2>
-                <div class="row justify-content-center">
-                    <div class="col-sm-5 col-md-4 col-lg-2">
-                        <div class="offer-item flex-col">
-                            <a href="details.html" class="link">
-                                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=210,height=/https://www.jarir.com/media//catalog/product/5/7/578443.jpg?1" alt="Card image cap">
-                            </a>
-                            <div class="offer-body text-align-center">
-                                <h5 class="offer-title">
-                                    <img src="imgs/redBook.svg" alt="">
-                                    كتاب الكتروني
-                                </h5>
-                                <p class="offer-text">
-                                    <a href="pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
-                                </p>
-                                <p class="price my-1">
-                                    <span class="h3">17.99</span>.ر.س
-                                    <br><span>شامل الضريبة</span>
-                                </p>
-                                <p id="time-left my-1">
-                                    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
-                                </p>
-                            </div>
-                            <ul class="offer-footer d-flex justify-content-space-between align-items-center mb-1">
-                                <li>
-                                    <a href="#">
-                                        <object data="imgs/main.svg"></object>
-                                    </a>
-                                </li>
-                                <li class="addProduct">
-                                    <button class="add-to-cart">
-                                        <img src="imgs/addProduct.svg">
-                                    </button>                
-                                </li>
-                                <li>
-                                    <a href="#"><object data="imgs/exchange.svg"></object></a>
-                                </li>
-                            </ul>
+                <div class="row g-10 justify-content-center">
+                    <div class="card-item">
+                        <a href="details.html" class="link">
+                            <img src="imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-title">
+                                <img src="imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-text">
+                                <a href="pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p id="time-left my-1">
+                                <span id="days"></span>
+                                :
+                                <span id="hours"></span>
+                                :
+                                <span id="minutes"></span>
+                                :
+                                <span id="seconds"></span>
+                            </p>
                         </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/main.svg">
+                                </a>
+                            </li>
+                            <li onclick="addToCart()">
+                                <a class="addProduct">
+                                    <img src="imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="details.html" class="link">
+                            <img src="imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-title">
+                                <img src="imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-text">
+                                <a href="pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p id="time-left my-1">
+                                <span id="days"></span>
+                                :
+                                <span id="hours"></span>
+                                :
+                                <span id="minutes"></span>
+                                :
+                                <span id="seconds"></span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/main.svg">
+                                </a>
+                            </li>
+                            <li onclick="addToCart()">
+                                <a class="addProduct">
+                                    <img src="imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="details.html" class="link">
+                            <img src="imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-title">
+                                <img src="imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-text">
+                                <a href="pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p id="time-left my-1">
+                                <span id="days"></span>
+                                :
+                                <span id="hours"></span>
+                                :
+                                <span id="minutes"></span>
+                                :
+                                <span id="seconds"></span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/main.svg">
+                                </a>
+                            </li>
+                            <li onclick="addToCart()">
+                                <a class="addProduct">
+                                    <img src="imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="details.html" class="link">
+                            <img src="imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-title">
+                                <img src="imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-text">
+                                <a href="pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p id="time-left my-1">
+                                <span id="days"></span>
+                                :
+                                <span id="hours"></span>
+                                :
+                                <span id="minutes"></span>
+                                :
+                                <span id="seconds"></span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/main.svg">
+                                </a>
+                            </li>
+                            <li onclick="addToCart()">
+                                <a class="addProduct">
+                                    <img src="imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="details.html" class="link">
+                            <img src="imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-title">
+                                <img src="imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-text">
+                                <a href="pages/details.html">الله أكبر</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p id="time-left my-1">
+                                <span id="days"></span>
+                                :
+                                <span id="hours"></span>
+                                :
+                                <span id="minutes"></span>
+                                :
+                                <span id="seconds"></span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/main.svg">
+                                </a>
+                            </li>
+                            <li onclick="addToCart()">
+                                <a class="addProduct">
+                                    <img src="imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
         <footer>
             <div class="container mb-2">
                 <div class="flex-col md-dir-row justify-content-space-between">
                     <div class="col-md-5 col-lg-3 mb-3">
-                        <h2 class="subscribe d-md-block">انضم إلى نشرتنا البريدية</h2>
-                        <form action="" class="d-flex">
+                        <h4 class="subscribe d-md-block">انضم إلى نشرتنا البريدية</h4>
+                        <form action="" class="d-flex g-10">
                             <div class="form-control email">
                                 <label for="subscribe"></label>
                                 <input
                                     id="subscribe"
                                     type="email"
                                     name="subscribe"
-                                    placeholder="ادخل بريدك الالكتروني" class="w-100">
+                                    placeholder="ادخل بريدك الالكتروني"
+                                    class="w-100"
+                                >
                                 <i class="fa fa-lock"></i>
                             </div>
                             <div class="form-control mr-auto">
                                 <input type="submit" value="اشتراك">
-                            </div>     
+                            </div>
                         </form>
                     </div>
                     <div class="col-md-3 col-lg-2">
-                        <h2>خدمة العملاء</h2>
+                        <h4>خدمة العملاء</h4>
                         <ul class="d-md-block">
                             <li>
                                 <a href="#">مبيعات الشركات</a>
@@ -304,7 +499,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-lg-2">
-                        <h2>خدمات جرير</h2>
+                        <h4>خدمات جرير</h4>
                         <ul class="d-md-block">
                             <li>
                                 <a href="#">خدمة تقسيط المشتريات</a>
@@ -327,7 +522,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-lg-2">
-                        <h2>روابط سريعة</h2>
+                        <h4>روابط سريعة</h4>
                         <ul class="d-md-block">
                             <li>
                                 <a href="#">إصدارات جرير</a>
@@ -344,7 +539,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-lg-2">
-                        <h2>عن جرير</h2>
+                        <h4>عن جرير</h4>
                         <ul class="d-md-block">
                             <li>
                                 <a href="#">من نحن</a>
@@ -367,7 +562,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-lg-3">
-                        <h2>تواصل معنا</h2>
+                        <h4>تواصل معنا</h4>
                         <div class="social-media d-flex justify-content-space-between md-justify-content-flex-start">
                             <a href="#" class="social-icon">
                                 <img src="imgs/socialMedia/facebook.svg">
@@ -396,26 +591,31 @@
             </div>
             <div class="row bottom-footer lg-justify-content-space-between align-items-center">
                 <div class="payment-method d-inline-block md-mr-3">
-                    <img src="imgs/paymentMethods/americanExpress.svg" alt="" style="background-color: #27ade4;" >
+                    <img src="imgs/paymentMethods/americanExpress.svg" alt="" style="background-color: #27ade4">
                     <img src="imgs/paymentMethods/masterCard.svg" alt="">
                     <img src="imgs/paymentMethods/visa.svg" alt="">
-                    <img src="imgs/paymentMethods/mada.svg" alt="" style="background-color: #fff; padding-block: 8px;">
-                    <img src="imgs/paymentMethods/qitaf.svg" alt="" style="background-color: #fff;">
-                    <img src="imgs/paymentMethods/payInShop.svg" alt="" style="background-color: #fff;">
+                    <img src="imgs/paymentMethods/mada.svg" alt="" style="background-color: #fff; padding-block: 8px">
+                    <img src="imgs/paymentMethods/qitaf.svg" alt="" style="background-color: #fff">
+                    <img src="imgs/paymentMethods/payInShop.svg" alt="" style="background-color: #fff">
                 </div>
                 <div class="copyright">
                     <p class="lg-text-align-end">
-                        <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a><br>
+                        <a href="#">سياسة الخصوصية</a>
+                        |
+                        <a href="#">شروط الخدمة</a>
+                        <br>
                         جميع الحقوق محفوظة لمكتبة جرير&copy; 2015 س.ت.1010032264. اونلاين
-                        س.ت.1010654213
+						س.ت.1010654213
                     </p>
                 </div>
             </div>
         </footer>
-        <!-- <script src="js/app.js"></script> -->
-        <script src="js/modals.js"></script>
+        <script src="js/cart.js"></script>
+        <!-- <script src="js/app.js"></script>
+        <script src="js/modals.js"></script> -->
+        <script src="js/radomAdvertisment.js"></script>
+        <script src="js/slider.js"></script>
         <script src="js/search.js"></script>
-        <script scr="js/cart.js"></script>
     </body>
-    <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script> -->
 </html>
