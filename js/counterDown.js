@@ -33,6 +33,7 @@ const countDownFunc = (distance)=> {
         document.getElementById(`hours${i+1}`).innerHTML = getRemainHours(distance);
         document.getElementById(`min${i+1}`).innerHTML = getRemainMinutes(distance);
         document.getElementById(`sec${i+1}`).innerHTML = getRemainSeconds(distance);
+        document.getElementById(`day${i+1}`).parentNode.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector('.left-in-days span').innerHTML = getRemainDays(distance);
     }
 }
 countDownFunc();
