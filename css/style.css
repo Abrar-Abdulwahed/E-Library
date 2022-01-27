@@ -2,7 +2,7 @@
 
 .left-in-days {
     background-color: #e4faef;
-    border-right: 4px #13ce66 solid;
+    border-inline-start: 4px #13ce66 solid;
     border-radius: var(--border-radius-5);
     padding: .3rem;
     text-align: start;
