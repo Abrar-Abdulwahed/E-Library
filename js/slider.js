@@ -1,49 +1,19 @@
-  vararrowLeft = document.querySelector("#arrow-left"),
-  arrowRight = document.querySelector("#arrow-right"),
-  current = 0;
- 
-
-  var slideIndex = 1;
-
+  var slideIndex = 0;
   var myTimer;
-  
-  var slideshowContainer;
-  
-  window.addEventListener("load",function() {
-      showSlides(slideIndex);
-      myTimer = setInterval(function(){plusSlides(1)}, 4000);
-    
-      //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-      slideshowContainer = document.getElementsByClassName('slider')[0];
-    
-      //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-      // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-    
-      slideshowContainer.addEventListener('mouseenter', pause)
-      slideshowContainer.addEventListener('mouseleave', resume)
-  })
-  
-  console.log('inside slider');
-  // NEXT AND PREVIOUS CONTROL
+  myTimer = setInterval(function(){plusSlides(0)}, 2000);
   function plusSlides(n){
+    // important for dont remember current path of slideshow
     clearInterval(myTimer);
-    if (n < 0){
+    if (n < 0){ // if start from end
       showSlides(slideIndex -= 1);
     } else {
      showSlides(slideIndex += 1); 
     }
-    
-    //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    
-    if (n === -1){
-      myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
-    } else {
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-    }
+    // important(with clearInterval(myTimer)) for resume
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
   }
-  
-  //Controls the current slide and resets interval if needed
-  function currentSlide(n){
+
+  function slideByDots(n){
     clearInterval(myTimer);
     myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
     showSlides(slideIndex = n);
@@ -52,6 +22,7 @@
   function showSlides(n){
     var i;
     var slides = document.getElementsByClassName("slider-item");
+    console.log(slides, ", ", slideIndex, ", ", n);
     var dots = document.getElementsByClassName("indicator");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
@@ -63,13 +34,4 @@
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-  }
-  
-  pause = () => {
-    clearInterval(myTimer);
-  }
-  
-  resume = () =>{
-    clearInterval(myTimer);
-    myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
   }
