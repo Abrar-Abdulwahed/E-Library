@@ -1,69 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.relative {
-    position: relative;
-}
-
-.deadline {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 10px;
-    opacity: 0;
-    color: #ea4c4c;
-}
-
-.countdown {
-    flex-direction: row-reverse !important;
-}
-
-.countdown .bloc-time {
-    text-align: center;
-}
-
-.countdown .count-title {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 10px !important;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-
-.countdown .figure {
-    height: 1.6em;
-    width: 2em;
-    margin-right: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 20%), inset 2px 4px 0 0 rgb(255 255 255 / 8%);
-}
-
-.countdown .figure span {
-    color: #ea4c4c;
-    font-weight: 600;
-}
-
-.countdown .figure:last-child {
-    margin-right: 0;
-}
-
-.card-item:hover .overlay {
-    transition: .5s;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.808);
-}
-
-.card-item:hover .deadline {
-    opacity: 1;
-}
-
 .gallery {
     width: 100%;
 }
@@ -795,44 +731,110 @@ h6 {
     width: 100%;
 }
 
-/*================= Offers ==================*/
-section.offer-section .card-item {
+/*================= Sections ==================*/
+
+/*================= Offer =================*/
+.relative {
+    position: relative;
+}
+
+.deadline {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    color: #ea4c4c;
+}
+
+.countdown {
+    flex-direction: row-reverse !important;
+}
+
+.countdown .bloc-time {
+    text-align: center;
+}
+
+.countdown .count-title {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 10px !important;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.countdown .figure {
+    height: 1.6em;
+    width: 2em;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 20%), inset 2px 4px 0 0 rgb(255 255 255 / 8%);
+}
+
+.countdown .figure span {
+    color: #ea4c4c;
+    font-weight: 600;
+}
+
+.countdown .figure:last-child {
+    margin-right: 0;
+}
+
+.card-item:hover .overlay {
+    transition: .5s;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+.card-item:hover .deadline {
+    opacity: 1;
+}
+
+section .card-item {
     border: 1px solid var(--2nd-border-color);
     box-shadow: var(--1st-box-shadow);
     border-radius: var(--border-radius-5);
     flex: 0 0 20%;
-    min-width: 150px;
-    max-width: 250px;
+    min-width: 250px;
+    max-width: 270px;
 }
 
-section.offer-section .card-item:hover {
+section .card-item:hover {
     border-color: var(--red-color);
 }
 
-section.offer-section .card-body {
+section .card-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     text-align: center;
 }
 
-section.offer-section .card-text {
+section .card-text {
     color: var(--main-opacity-color);
 
 }
 
-section.offer-section .card-text a {
+section .card-text a {
     color: inherit;
 }
 
-section.offer-section .card-footer {
+section .card-footer {
     padding: .3em .7em;
 }
 
-section.offer-section .card-footer>li {
+section .card-footer>li {
     cursor: pointer;
 }
 
-section.offer-section .card-footer .addProduct {
+section .card-footer .addProduct {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -845,7 +847,7 @@ section.offer-section .card-footer .addProduct {
     transition: all .3s ease-in-out;
 }
 
-section.offer-section .card-footer img {
+section .card-footer img {
     width: 1.7rem;
     height: 1.7rem;
 }
