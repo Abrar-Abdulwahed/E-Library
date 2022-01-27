@@ -119,36 +119,26 @@
                     <div class="col-xs-12 col-sm-5 col-md-3 item-images">
                         <img src="imgs/books/book1.jpg" alt="item" onclick="openModal('slideShowModal')" >
                         <ul class="other-images d-flex justify-content-center g-10 my-1">
-                            <li><img src="imgs/books/book2.jpg" alt="item-part" width="20"></li>
-                            <li><img src="imgs/books/book3.jpg" alt="item-part" width="20"></li>
-                            <li><img src="imgs/books/book4.jpg" alt="item-part" width="20"></li>   
+                            <li><img src="imgs/books/book3.jpg" alt="item-part" width="20"></li>   
                             <li><img src="imgs/books/book5.jpg" alt="item-part" width="20"></li>  
                             <li><img src="imgs/books/book6.jpg" alt="item-part" width="20"></li>  
-                            <li><img src="imgs/books/book7.jpg" alt="item-part" width="20"></li> 
                         </ul>
                         <div id="slideShowModal" class="modal">
                             <div id="slideShowModal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4">
                                 <span class="close-btn" onclick="closeModal('slideShowModal')">&times;</span>
                                 <div class="gallery">
                                     <div class="gallery-container slider">
-                                        <!-- <img class="gallery-item" src="imgs/books/book1.jpg" data-index="1"> -->
-                                        <img class="gallery-item slider-item" src="imgs/books/book2.jpg" data-index="2">
                                         <img class="gallery-item slider-item" src="imgs/books/book3.jpg" data-index="3">
-                                        <img class="gallery-item slider-item" src="imgs/books/book4.jpg" data-index="4">
                                         <img class="gallery-item slider-item" src="imgs/books/book5.jpg" data-index="5">
                                         <img class="gallery-item slider-item" src="imgs/books/book6.jpg" data-index="6">
-                                        <img class="gallery-item slider-item" src="imgs/books/book7.jpg" data-index="7">
                                     </div>
                                     <a id="arrow-left" onclick="plusSlides(1)">❯</a>
                                     <a id="arrow-right" onclick="plusSlides(-1)">❮</a>
                                 </div>
                                 <ul class="dots d-flex justify-content-center g-10 my-1">
-                                    <li class="indicator" onclick="currentSlide(1)"><img src="imgs/books/book2.jpg" alt="item-part" width="20"></li>
-                                    <li class="indicator" onclick="currentSlide(2)"><img src="imgs/books/book3.jpg" alt="item-part" width="20"></li>
-                                    <li class="indicator" onclick="currentSlide(3)"><img src="imgs/books/book4.jpg" alt="item-part" width="20"></li>   
+                                    <li class="indicator" onclick="currentSlide(2)"><img src="imgs/books/book3.jpg" alt="item-part" width="20"></li>  
                                     <li class="indicator" onclick="currentSlide(4)"><img src="imgs/books/book5.jpg" alt="item-part" width="20"></li>  
                                     <li class="indicator" onclick="currentSlide(5)"><img src="imgs/books/book6.jpg" alt="item-part" width="20"></li> 
-                                    <li class="indicator" onclick="currentSlide(6)"><img src="imgs/books/book7.jpg" alt="item-part" width="20"></li> 
                                 </ul>
                             </div>
                         </div>
@@ -212,7 +202,7 @@
                                 <select name="product_qty" id="product-qty" class="round-5">
                                     <option value="1">1</option>
                                 </select>
-                                <button class="btn danger-btn f-auto round-5" onclick="addToCart()"><img src="imgs/addProduct.svg"> أضف إلى السلة </button>
+                                <button class="btn danger-btn f-auto round-5 js-cart"><img src="imgs/addProduct.svg"> أضف إلى السلة </button>
                             </div>
                             <ul class="d-flex option-tool">
                                 <li><img src="imgs/opacity-lock.svg">تسوق آمن<img src="imgs/question.svg" alt="que icon"></li>
