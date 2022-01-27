@@ -75,6 +75,7 @@ img {
 }
 
 button {
+    cursor: pointer !important;
     background-color: transparent;
 }
 
@@ -224,7 +225,7 @@ h6 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     background-color: transparent;
-    cursor: pointer;
+    cursor: pointer !important;
     font-weight: 600;
     color: #fff;
     background-color: transparent;
@@ -513,6 +514,11 @@ h6 {
 }
 
 /*================ Modal =================*/
+header {
+    position: relative;
+    z-index: 20;
+}
+
 .top-nav {
     background-color: #f9fafc;
     border: 1px solid var(--second-color);
@@ -541,12 +547,6 @@ h6 {
     width: 15px;
     vertical-align: middle;
     margin-inline-end: 20px;
-}
-
-.main-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
 .main-nav .grid {
@@ -1158,105 +1158,159 @@ section .card-footer img {
     color: var(--blue-color);
 }
 
-.cart-section .form_wrapper .msf_hide {
-    display: none;
-}
-
-.cart-section .form_wrapper .msf_show {
-    display: block;
-}
-
-.cart-section .form_wrapper .msf_bullet_o {
+/* .checkout.stepper {
+    width: 20rem;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
-}
-
-.cart-section .form_wrapper .msf_bullet_o>div {
-    height: 15px;
-    width: 15px;
-    margin: 20px 10px;
-    border-radius: 100px;
-    z-index: 2;
-}
-
-.cart-section .form_wrapper .msf_bullet {
-    background-color: lightgrey;
-
-}
-
-.cart-section .form_wrapper .msf_bullet_active {
-    background-color: darkgrey !important;
-}
-
-.cart-section .form_wrapper .msf_line {
-    opacity: 0.3;
-    background: lightgrey;
-    height: 3px;
-    width: 70px;
-    display: block;
-    left: 50%;
-    margin-top: -29px;
-    margin-inline-end: -35px;
+    align-items: center;
     position: absolute;
-    z-index: 1;
+    top: 5%;
 }
 
-.cart-section .form_wrapper fieldset {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 30px;
-    border-radius: 0px;
-    border: none;
-    padding: 10px 20px !important;
+.step--1,
+.step--2,
+.step--3,
+.step--4 {
+    width: 5rem;
+    padding: 0.5rem 0;
+    background: #fff;
+    color: #666;
+    text-align: center;
 }
 
-.cart-section .form_wrapper input {
-    display: block;
+.step--1,
+.step--2,
+.step--3 {
+    border-right: 1px solid #666;
+}
+
+main.checkout {
+    height: 100vh;
     width: 100%;
-    height: 40px !important;
-    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
-.cart-section .form_wrapper input[type="text"], .cart-section .form_wrapper input[type="email"] {
-    outline: none;
-    border: none;
-    background-color: lightgrey;
-    padding: 5px 0px !important;
+.checkout .form {
+    background: #fff;
     text-align: center;
-    transition: all 250ms;
+    position: absolute;
+    width: 25rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+    display: none;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-.cart-section .form_wrapper input[type="text"]:focus, .cart-section input[type="email"]:focus {
-    opacity: 0.5;
+.form--header-container {
+    background: linear-gradient(to right, rgb(51, 51, 51), #919191);
+    color: #fff;
+    height: 6rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
 }
 
-.cart-section .form_wrapper input[type="button"], .cart-section input[type="submit"] {
-    margin-top: 20px !important;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    padding: 15px !important;
-    line-height: 0px;
-    background-color: #fff;
-    transition: all 150ms;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
+.form--header-title {
+    font-size: 1.4rem;
 }
 
-.cart-section .form_wrapper input[type="button"]:hover, .cart-section input[type="submit"]:hover {
-    background-color: darkgrey;
-    color: white;
+.form--header-text {
+    padding: 0.5rem 0;
 }
 
-.cart-section .form_wrapper h2 {
-    text-align: center;
-    font-size: 22px;
-    font-family: opensans;
-    font-weight: 400;
+.checkout input[type="text"] {
+    padding: 0.8rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    width: 20rem;
     display: block;
-    margin-bottom: 25px !important;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid #bdbdbb;
 }
+
+.form__btn {
+    background: #333;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    width: 7rem;
+    margin: 1rem auto;
+    border-radius: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form--message-text {
+    width: 25rem;
+    background: #fff;
+    color: #444;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+    animation: fadeIn 0.8s;
+    border-radius: 1rem;
+}
+
+.form-active {
+    z-index: 1000;
+    display: block;
+}
+
+.form-active-animate {
+    animation: moveRight 1s;
+}
+
+.form-inactive {
+    display: block;
+    animation: moveLeft 1s;
+}
+
+.step-active {
+    background: #666;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-27rem) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(27rem) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
 
 /*================= Footer ==================*/
 footer {

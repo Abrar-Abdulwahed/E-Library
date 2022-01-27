@@ -1,3 +1,4 @@
+console.log('inside modals');
 let loginPage = `
                 <span class="close-btn" id="close_btn" onclick="closeModal('signup-login-modal')">&times;</span>
                 <div class="login-form py-1">
@@ -104,6 +105,7 @@ var slideshow_modal = document.getElementById("slideShowModal");
 var closeBTN = document.getElementById('close_btn');
 
 function openModal(modalName, ...other){
+    console.log('yyyyyyyyyyyes');
     document.getElementById(modalName).style.display = "flex";
     if(modalName == "signup-login-modal"){
         if(other == "loginForm")

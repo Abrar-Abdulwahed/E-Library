@@ -1,5 +1,3 @@
-// var slides = document.getElementsByClassName("gallery-item"),
-// indicators = document.getElementsByClassName("indicator"),
   vararrowLeft = document.querySelector("#arrow-left"),
   arrowRight = document.querySelector("#arrow-right"),
   current = 0;
@@ -25,6 +23,7 @@
       slideshowContainer.addEventListener('mouseleave', resume)
   })
   
+  console.log('inside slider');
   // NEXT AND PREVIOUS CONTROL
   function plusSlides(n){
     clearInterval(myTimer);

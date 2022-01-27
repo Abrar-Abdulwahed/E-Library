@@ -9,6 +9,104 @@
         <base href="../">
     </head>
     <body>
+        <header>
+            <div class="top-nav" id="top-nav">
+                <div class="container">
+                    <ul class="row align-content-center justify-content-space-between">
+                        <li class="menubar-li">
+                            <a href="javascript:void(0);" class="menubar-icon" onclick="menubarFunc()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <img src="imgs/register.svg">
+                            <b>
+                                <span onclick="openModal('signup-login-modal', 'loginForm')">
+                                    ادخل لحسابك
+                                </span>
+                                أو
+                                <span onclick="openModal('signup-login-modal', 'signupForm')">
+                                    سجل الآن
+                                </span>
+                            </b>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/main.svg">
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/who.svg">
+                                من نحن
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/warranty.svg">
+                                اتصل بنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/help.svg">
+                                المساعدة
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/privacy.svg">
+                                سياسة الخصوصية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="imgs/saudi.svg">
+                                YER اليمن
+                            </a>
+                        </li>
+                        <li class="change-language">
+                            <a href="#">
+                                <span>English</span>
+                                <img src="imgs/language.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="signup-login-modal" class="modal">
+                <div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
+            </div>
+            <div class="main-nav">
+                <div class="container">
+                    <div class="grid">
+                        <a href="index.html" class="logo">
+                            <img src="imgs/logo.png" alt="">
+                        </a>
+                        <form action="" class="d-flex justify-content-space-between">
+                            <label for="header_search"></label>
+                            <input
+                                onkeyup="search_book()"
+                                id="header_search"
+                                type="search"
+                                name="header_search"
+                                placeholder="البحث"
+                                class="w-100"
+                            >
+                            <button type="submit" name="header_search_submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a class="cart-btn link" href="pages/cart.html">
+                            <img src="imgs/cart.svg">
+                            <span class="cart-quantity" id="cart-quantity">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
         <section class="cart-section my-2">
             <div class="container">
                 <div class="h4 title mb-2">
@@ -21,7 +119,7 @@
                         <div class="cart-item px-2 pt-2 mt-1">
                             <div class="item-above d-flex">
                                 <div class="ml-1">
-                                    <img src="https://www.jarir.com/media//catalog/product/5/6/569419.jpg" alt="user" width="40">
+                                    <img src="imgs/books/book11.jpg" alt="user" width="40">
                                 </div>
                                 <div class="item-details">
                                     <span class="h6">
@@ -72,7 +170,7 @@
                         <div class="cart-item px-2 pt-2 mt-1">
                             <div class="item-above d-flex">
                                 <div class="ml-1">
-                                    <img src="https://www.jarir.com/media//catalog/product/5/5/553206.jpg" alt="user" width="40">
+                                    <img src="imgs/books/book10.jpg" alt="user" width="40">
                                 </div>
                                 <div class="item-details">
                                     <span class="h6">فن اللامبالاة (كتاب إلكتروني)</span>
@@ -121,7 +219,7 @@
                         <div class="cart-item px-2 pt-2 mt-1">
                             <div class="item-above d-flex">
                                 <div class="ml-1">
-                                    <img src="https://www.jarir.com/media//catalog/product/5/6/561058.jpg" alt="user" width="40">
+                                    <img src="imgs/books/book9.jpg" alt="user" width="40">
                                 </div>
                                 <div class="item-details">
                                     <span class="h6">غداً أجمل (كتاب إلكتروني)</span>
@@ -200,102 +298,184 @@
                                     و
                                     <a>سياسة الخصوصية</a>
                                 </p>
-                                <button id="completeShopping" onclick="completeShopping()" class="btn danger-btn w-100 mt-2 py-1">
+                                <a href="" id="completeShopping" class="btn danger-btn w-100 mt-2 py-1">
                                     إنهاء التسوق
-                                </button>
+                                </a>
                             </div>
-                        </div>
-                        <div class="form_wrapper" id="completeBuy" style="display: none">
-                            <fieldset class="msf_hide">
-                                <h2>The first form</h2>
-                                <div>
-                                    <input type="text" name="firstname" placeholder="First Name">
-                                    <input type="text" name="lastname" placeholder="Last Name">
-                                </div>
-                                <div>
-                                    <input type="email" name="email" placeholder=" Your Email">
-                                </div>
-                                <input
-                                    type="button"
-                                    name="back"
-                                    value="Back"
-                                    onclick="msf_btn_back()"
-                                >
-                                <input
-                                    type="button"
-                                    name="next"
-                                    value="Next"
-                                    onclick="msf_btn_next()"
-                                >
-                                <div class="msf_bullet_o"></div>
-                                <div class="msf_line"></div>
-                            </fieldset>
-                            <fieldset class="msf_hide">
-                                <h2>This is form 2</h2>
-                                <input type="text" name="school" placeholder="School">
-                                <input type="date" name="date" placeholder="Birthdate">
-                                <div>
-                                    <input
-                                        type="radio"
-                                        name="gender"
-                                        value="male"
-                                        checked
-                                    >
-                                    Male
-                                    <br>
-                                    <input type="radio" name="gender" value="female">
-                                    Female
-                                    <br>
-                                    <input type="radio" name="gender" value="other">
-                                    Other
-                                </div>
-                                <input
-                                    type="button"
-                                    name="back"
-                                    value="Back"
-                                    onclick="msf_btn_back()"
-                                >
-                                <input
-                                    type="button"
-                                    name="next"
-                                    value="Next"
-                                    onclick="msf_btn_next()"
-                                >
-                                <div class="msf_bullet_o"></div>
-                                <div class="msf_line"></div>
-                            </fieldset>
-                            <fieldset class="msf_hide">
-                                <h2>The last form</h2>
-                                <input type="text" name="name" placeholder="Name">
-                                <input type="email" name="email" placeholder="Email">
-                                <input
-                                    type="button"
-                                    name="back"
-                                    value="Back"
-                                    onclick="msf_btn_back()"
-                                >
-                                <input
-                                    type="button"
-                                    name="next"
-                                    value="Next"
-                                    onclick="msf_btn_next()"
-                                >
-                                <input
-                                    type="submit"
-                                    name="submit"
-                                    value="Submit Now!"
-                                    onclick=""
-                                >
-                                <div class="msf_bullet_o"></div>
-                                <div class="msf_line"></div>
-                            </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <footer class="mt-2">
+            <div class="container mb-2">
+                <div class="flex-col md-dir-row justify-content-space-between">
+                    <div class="col-md-5 col-lg-3 mb-3">
+                        <h4 class="subscribe d-md-block">انضم إلى نشرتنا البريدية</h4>
+                        <form action="" class="col-flex g-10">
+                            <div class="form-control email">
+                                <label for="subscribe"></label>
+                                <input
+                                    id="subscribe"
+                                    type="email"
+                                    name="subscribe"
+                                    placeholder="ادخل بريدك الالكتروني"
+                                    class="w-100"
+                                >
+                                <i class="fa fa-lock"></i>
+                            </div>
+                            <div class="form-control mr-auto w-fit-content mt-1">
+                                <input type="submit" value="اشتراك">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <h4>خدمة العملاء</h4>
+                        <ul class="d-md-block">
+                            <li>
+                                <a href="#">مبيعات الشركات</a>
+                            </li>
+                            <li>
+                                <a href="#">الأسئلة المتكررة</a>
+                            </li>
+                            <li>
+                                <a href="#">دليل التسوق والمطبوعات</a>
+                            </li>
+                            <li>
+                                <a href="#">مواقع المعارض</a>
+                            </li>
+                            <li>
+                                <a href="#">سياسة الضمان</a>
+                            </li>
+                            <li>
+                                <a href="#">سياسة الاسترجاع والاستبدال</a>
+                            </li>
+                            <li>
+                                <a href="#">اتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <h4>خدمات جرير</h4>
+                        <ul class="d-md-block">
+                            <li>
+                                <a href="#">خدمة تقسيط المشتريات</a>
+                            </li>
+                            <li>
+                                <a href="#">خدمات ما بعد البيع</a>
+                            </li>
+                            <li>
+                                <a href="#">خدمات الحماية الشاملة</a>
+                            </li>
+                            <li>
+                                <a href="#">حماية أجهزة آبل</a>
+                            </li>
+                            <li>
+                                <a href="#">بطاقة خصم جرير</a>
+                            </li>
+                            <li>
+                                <a href="#">بطاقة جرير للهدايا</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <h4>روابط سريعة</h4>
+                        <ul class="d-md-block">
+                            <li>
+                                <a href="#">إصدارات جرير</a>
+                            </li>
+                            <li>
+                                <a href="#">قارئ جرير</a>
+                            </li>
+                            <li>
+                                <a href="#">شركاء برامج المكافآت</a>
+                            </li>
+                            <li>
+                                <a href="#">خدمات شركات الاتصالات</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <h4>عن جرير</h4>
+                        <ul class="d-md-block">
+                            <li>
+                                <a href="#">من نحن</a>
+                            </li>
+                            <li>
+                                <a href="#">الحوكمة</a>
+                            </li>
+                            <li>
+                                <a href="#">علاقات المستثمرين</a>
+                            </li>
+                            <li>
+                                <a href="#">الاستدامة</a>
+                            </li>
+                            <li>
+                                <a href="#">الأخبار</a>
+                            </li>
+                            <li>
+                                <a href="#">فرص العمل</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-3">
+                        <h4>تواصل معنا</h4>
+                        <div class="social-media d-flex justify-content-space-between md-justify-content-flex-start">
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/facebook.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/twitter.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/youtube.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/instagram.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/linkedin.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/snapshat.svg">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="imgs/socialMedia/music.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-footer lg-justify-content-space-between align-items-center">
+                <div class="payment-method d-inline-block md-mr-3">
+                    <img src="imgs/paymentMethods/americanExpress.svg" alt="" style="background-color: #27ade4">
+                    <img src="imgs/paymentMethods/masterCard.svg" alt="">
+                    <img src="imgs/paymentMethods/visa.svg" alt="">
+                    <img src="imgs/paymentMethods/mada.svg" alt="" style="background-color: #fff; padding-block: 8px">
+                    <img src="imgs/paymentMethods/qitaf.svg" alt="" style="background-color: #fff">
+                    <img src="imgs/paymentMethods/payInShop.svg" alt="" style="background-color: #fff">
+                </div>
+                <div class="copyright">
+                    <p class="lg-text-align-end">
+                        <a href="#">سياسة الخصوصية</a>
+                        |
+                        <a href="#">شروط الخدمة</a>
+                        <br>
+                        جميع الحقوق محفوظة لمكتبة جرير&copy; 2015 س.ت.1010032264. اونلاين
+						س.ت.1010654213
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/cart.js"></script>
+        <script src="js/modals.js"></script>
+        <script src="js/radomAdvertisment.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/changeLang.js"></script>
+        <script src="js/menuBar.js"></script>
+        <script src="js/counterDown.js"></script>
         <script src="js/formPopup.js"></script>
-        <script src="js/app.js"></script>
     </body>
     <script src="https://kit.fontawesome.com/0258162a56.js" crossorigin="anonymous"></script>
 </html>
