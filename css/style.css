@@ -8,6 +8,10 @@
     text-align: start;
 }
 
+.no-wrap {
+    flex-wrap: nowrap !important;
+}
+
 .gallery {
     width: 100%;
 }
@@ -510,7 +514,7 @@ h6 {
 .indicator.active {
     background: #fff !important;
     border: 1px solid var(--main-color);
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 /*================ Modal =================*/
@@ -806,13 +810,17 @@ header {
     opacity: 1;
 }
 
+[class*="-section"] {
+    overflow: hidden;
+}
+
 section .card-item {
     border: 1px solid var(--2nd-border-color);
     box-shadow: var(--1st-box-shadow);
     border-radius: var(--border-radius-5);
     flex: 0 0 20%;
     min-width: 250px;
-    max-width: 270px;
+    max-width: 260px;
 }
 
 section .card-item:hover {
@@ -1208,7 +1216,7 @@ main.checkout {
     width: 25rem;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
     display: none;
-    border-radius: 1rem;
+    border-radius: var(--border-radius-5);
     overflow: hidden;
 }
 
