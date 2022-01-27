@@ -740,7 +740,19 @@ header {
     width: 100%;
     padding: 20px;
     border: 2px solid #0b490b;
+    border-radius: var(--border-radius-2);
+}
+
+.category-section .filter-box {
+    margin-top: 12px;
     border-radius: var(--border-radius-5);
+}
+
+.category-section .filter-box .filter-header {
+    background-color: #0b490b;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
 }
 
 /*================= Advertisement Banner ==================*/
