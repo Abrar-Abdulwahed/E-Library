@@ -544,6 +544,10 @@ header {
     margin-inline-end: 1rem;
 }
 
+.top-nav li:nth-child(2) {
+    align-items: center;
+}
+
 .top-nav li.menubar-li {
     display: none;
     /* height: 300px; */
